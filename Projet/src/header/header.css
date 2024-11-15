@@ -124,3 +124,20 @@
   .top:hover {
     color: #c0c0c0;
   }
+
+  .top .arrow {
+    display: inline-block;
+    margin-left: 5px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transition: transform 0.3s;
+  }
+  
+  .dropdown:hover .arrow {
+    transform: rotate(225deg); /* Flèche vers le haut */
+  }
+  
+  .arrow {
+    transform: rotate(45deg); /* Flèche vers le bas */
+  }

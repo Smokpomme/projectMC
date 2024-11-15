@@ -11,12 +11,16 @@
             fetch('../header/header.html')
                 .then(response => response.text())
                 .then(data => document.getElementById('header').innerHTML = data);
+
+            fetch('../footer/footer.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('footer').innerHTML = data);
               });
       </script>
 </head>
 <body>
     <main class="main-content">
-    <div class="header">
+    <div id="header">
         
     </div>
 
@@ -99,48 +103,7 @@
 
     </main>
     
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>JEUX</h4>
-                <a href="#">Minecraft</a>
-                <a href="#">Minecraft Dungeons</a>
-            </div>
-        <div class="footer-section">
-                <h4>DECOUVRIR</h4>
-                <a href="#">Mojang Games Store</a>
-                <a href="#">Communauté</a>
-                <a href="#">Produit Dérivés</a>
-        </div>
-        <div class="footer-section">
-                <h4>OUTILS</h4>
-                <a href="#">Minecraft Forge</a>
-                <a href="#">WorldEdit</a>
-        </div>
-        <div class="footer-section">
-                <h4>SUPPORT</h4>
-                <a href="#">Centre d'aide</a>
-                <a href="#">FAQ</a>
-                <a href="#">Support technique</a>
-        </div>
-            <div class="footer-section">
-                <h4>ENTREPRISE</h4>
-                <a href="#">À propos</a>
-                <a href="#">Mojang NewsRoom</a>
-                <a href="#">Emplois</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© 2024 Mon Site Web. Tous droits réservés.</p>
-            <div class="footer-links">
-                <a href="#privacy">Politique de confidentialité</a>
-                <a href="#terms">Conditions d'utilisation</a>
-                <a href="#contact">Contact</a>
-                <img class="logofoot" src="PIC/logo.png">
-                <img class="logofoot" src="PIC/micro.svg.png">
-            </div>
-        </div>
-    </footer>
+    <div id="footer"></div>
 
     
 
