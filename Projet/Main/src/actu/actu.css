@@ -1,0 +1,632 @@
+body {
+    margin: 0;
+    font-family: "CUSTOM";
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+  
+  @font-face {
+    font-family: "CUSTOM";
+    src: url("../../FONT/MIN.woff2");
+  }
+  @font-face {
+    font-family: "NOTO";
+    src: url("../../FONT/noto.ttf");
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    background-color: #313131;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 250vh;
+  
+    }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0, 0.8);  
+    color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    box-shadow: 0 4px #444444;
+  
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .logo {
+    width: 180px;
+    margin-right: 10px;
+    transition: transform 0.3s ease; 
+  }
+  
+  .logo:hover {
+    transform: scale(1.1); 
+  }
+  
+  .top-left, .top-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .top-left img {
+    height: 40px;
+    margin-left: 10px;
+  }
+  
+  .top {
+    margin: 0 10px;  
+    text-decoration: none;
+    color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  
+  .top-center {
+      flex: 2; /* Plus de flexibilité pour le centre */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .top-right .relief-button {
+    font-family: "CUSTOM";
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0px;
+    box-shadow: 0 4px #3C8527;
+    transition: all 0.3s ease;
+    margin-left: 10px;  
+  }
+  
+  .top-right .relief-button:hover {
+    background-color: #3C8527;
+  }
+  
+  .top-right .relief-button:active {
+    box-shadow: 0 2px #3C8527;
+    transform: translateY(2px);
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    width: 300px;
+    left: 0;
+    border-radius: 10px;
+  }
+  
+  .dropdown-content .dropdown-section {
+    padding: 10px;
+  }
+  
+  .dropdown-content .dropdown-section h4 {
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 5px 0;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #575757;
+    border-radius: 4px;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .top {
+    color: #c0c0c0;
+  }
+  
+  .top:hover {
+    color: #c0c0c0;
+  }
+  
+  
+  .title-container {
+    text-align: center;
+    margin: 0; 
+    background-color: #4CAF50 ;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    position: relative;
+    
+  
+  }
+  
+  .minecraft-news-title {
+    font-family: "CUSTOM"; 
+    font-size: 48px; 
+    color: white; 
+    text-align: center; /* Centre le texte pour un meilleur aspect sur mobile */
+  }
+  
+
+  
+  
+  
+  
+  
+/* Conteneur principal */
+.collection-container {
+    display: grid;
+    gap: 20px;
+    padding: 10px 20px;
+    background-color: rgb(36, 36, 36);
+    padding-top: 30px;
+  }
+.collection-text{
+    text-align: center;
+    color: white;
+}
+  
+  /* Carrousel */
+  .list-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .list {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .item {
+    flex: 0 0 33.33%; /* Trois items visibles à la fois */
+    box-sizing: border-box;
+    padding: 10px;
+
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .img_li {
+    width: 100%;
+    height: auto;
+    max-height: 60vh;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Description */
+  .description {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-family: 'NOTO';
+    font-size: 0.7em;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .content {
+    background-color: #dfdfdf;
+  }
+  
+  /* Boutons du carrousel */
+.button {
+    position: absolute;
+    top: 50%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.0); /* Fond semi-transparent pour ne pas masquer trop l'image */
+    color: white;
+    border: none;
+    cursor: pointer;
+    z-index: 2;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    transition: background-color 0.3s ease; /* Transition fluide sur le hover */
+  }
+  
+  .button--previous {
+    left: 1rem; /* Placé à gauche, légèrement à l'intérieur du carrousel */
+  }
+  
+  /* Bouton suivant */
+  .button--next {
+    right: 1rem; /* Placé à droite, légèrement à l'intérieur du carrousel */
+  }
+  
+  /* Effet au survol (hover) */
+  .button:hover::before {
+    border-color: #4CAF50; /* Couleur de la flèche lors du survol */
+  }
+  
+  /* Flèche à l'intérieur des boutons */
+  .button::before {
+    content: '';
+    display: inline-block;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    padding: 8px;
+    transform: rotate(45deg);
+  }
+  
+  /* Flèche directionnelle pour le bouton précédent */
+  .button--previous::before {
+    transform: rotate(135deg); /* Flèche pointant vers la gauche */
+  }
+  
+  /* Flèche directionnelle pour le bouton suivant */
+  .button--next::before {
+    transform: rotate(-45deg); /* Flèche pointant vers la droite */
+  }
+  
+  /* Masquer les flèches quand elles sont désactivées */
+  .button:disabled {
+    display: none;
+  }
+  
+  
+
+  
+  
+  
+  
+  /* Container Styles */
+.community-creations {
+  background-color: #3a3a3a;
+  padding: 40px;
+  text-align: center;
+  color: white;
+}
+
+.section-title {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-description {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.creation-info {
+  padding: 20px; /* Ajout de padding pour espacer le texte */
+  text-align: left; /* Aligner le texte à gauche */
+  color: black; /* Changer la couleur du texte en noir */
+}
+
+.creation-info h3 {
+  font-size: 1.5em; /* Augmenter la taille du titre */
+  margin-bottom: 10px; /* Espacement sous le titre */
+}
+
+.creation-info p {
+  font-size: 0.8em; /* Taille du texte pour le paragraphe */
+  font-family: "NOTO";
+}
+
+/* Grid Layout for 3x3 structure */
+.creations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);  /* 3 colonnes de largeur égale */
+  gap: 15px;  /* Espace entre les cartes */
+  justify-items: center;  /* Centrer les éléments dans chaque colonne */
+  max-width: 770px;  /* Largeur maximale pour éviter que ça prenne trop de place */
+  margin: 0 auto;  /* Centrer la grille */
+}
+
+
+.creation-card {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  
+  aspect-ratio: 1 / 1; /* Garde les cartes carrées */
+  background-color: #f0f0f0; /* Couleur de fond par défaut */
+}
+
+.creation-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Assure que l'image s'adapte à la taille de la carte */
+  transition: transform 0.3s ease-in-out;
+}
+
+.creation-card:hover img {
+  transform: scale(1.05); /* Légère augmentation au survol */
+}
+
+.creation-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent pour la description */
+  color: white;
+  padding: 10px;
+  max-height: 65px; /* Limite la hauteur visible par défaut */
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.creation-info p {
+  margin: 5px 0 0;
+  font-size: 0.9em;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.creation-info h3 {
+  display: inline-block;
+  background-color: white; /* Fond blanc pour le titre */
+  color: black; /* Texte noir pour contraster avec le fond blanc */
+  padding: 5px 10px;
+  font-size: 0.9em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-transform: uppercase; /* Mettre le texte en majuscules */
+}
+
+/* Affiche toute la description au survol */
+.creation-card:hover .creation-info {
+  max-height: 200px; /* Augmente la hauteur pour afficher toute la description */
+}
+  
+  
+  
+  
+
+/* Conteneur principal de la FAQ */
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centre le contenu horizontalement */
+  justify-content: center; /* Centre le contenu verticalement */
+  text-align: center;
+  padding: 50px;
+  background-color: white;
+}
+
+/* Titre de la FAQ */
+.faq-title {
+  font-family: 'CUSTOM';
+  font-size: 48px;
+  color: black;
+  margin-bottom: 40px;
+}
+
+/* Conteneur des colonnes */
+.faq-columns {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Style pour chaque colonne */
+.faq-column {
+  flex: 1; /* Chaque colonne prend 50% de la largeur */
+}
+
+/* Style pour chaque élément FAQ */
+.faq-item h2 {
+  font-family: 'CUSTOM';
+  font-size: 22px;
+  color: black;
+  margin-bottom: 10px;
+  text-align: left;
+  font-family: 'NOTO';
+}
+
+.faq-item p {
+  font-family: 'NOTO';
+  font-size: 14px;
+  color: black;
+  line-height: 1.5;
+  margin: 0 auto; /* Centrer les paragraphes */
+  text-align: left;
+}
+
+.faq-item a {
+  color: #458f31;
+  text-decoration: underline; /* Ajoute le soulignement par défaut */
+  transition: text-decoration 0.3s ease;
+}
+
+.faq-item a:hover {
+  text-decoration: none; /* Retire le soulignement au survol */
+}
+
+/* Styles responsives pour les petits écrans */
+@media (max-width: 768px) {
+  .faq-columns {
+      flex-direction: column; /* Passer en une colonne sur petit écran */
+      gap: 20px;
+  }
+
+  .faq-title {
+      font-size: 36px;
+  }
+
+  .faq-item h2 {
+      font-size: 20px;
+  }
+
+  .faq-item p {
+      font-size: 14px;
+  }
+}
+
+
+
+  
+  
+  
+  
+  .social-container {
+    background-color: #000000; /* Fond noir */
+    padding: 20px 0; /* Espacement interne */
+    text-align: center; /* Centrer le texte */
+  }
+  
+  .social-title {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espacement entre les icônes */
+  }
+  
+  .social-icon img {
+    width: 40px; /* Taille des icônes */
+    height: 40px;
+    border-radius: 50%; /* Pour rendre les icônes circulaires */
+    padding: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  .social-icon img:hover {
+    transform: scale(1.1); /* Agrandissement au survol */
+  }
+  
+  
+  
+  
+  
+  .footer {
+    background-color: rgba(0, 0, 0, 0.9); 
+    padding: 40px 0;
+    width: 100%;
+    font-family: "NOTO";
+    position: relative;
+    z-index: -1;
+  }
+  
+  .footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    margin-bottom: 20px;
+    flex: 1;
+    min-width: 180px;
+  }
+  
+  .footer-section h4 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #fff; /* Texte blanc pour les titres de section */
+  }
+  
+  .footer-section a {
+    display: block;
+    color: #bbb;
+    text-decoration: none;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .footer-section a:hover {
+    color: #fff; /* Texte blanc au survol */
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #888;
+  }
+  
+  .footer-links a {
+    color: #888;
+    margin: 0 15px;
+    text-decoration: none;
+    font-size: 12px;
+  }
+  
+  .footer-links a:hover {
+    color: #fff; 
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .footer-section {
+        text-align: center;
+    }
+  }
+  
+  .logofoot{
+    height: 30px;
+    transition: transform 0.3s ease; 
+    padding-left: 20px;
+  }
+  
+  .logofoot:hover {
+    transform: scale(1.1); 
+  }
+  
+  .top .arrow {
+    display: inline-block;
+    margin-left: 5px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    padding: 3px;
+    transition: transform 0.3s;
+  }
+  
+  .dropdown:hover .arrow {
+    transform: rotate(225deg); /* Flèche vers le haut */
+  }
+  
+  .arrow {
+    transform: rotate(45deg); /* Flèche vers le bas */
+  }

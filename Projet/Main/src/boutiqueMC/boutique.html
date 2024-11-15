@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jeux</title>
+    <link rel="stylesheet" href="boutique.css">
+</head>
+<body>
+    <main class="main-content">
+    <div class="header">
+        <div class="top-left">
+            <img class="logo" src="PIC/mc.svg" alt="Start">
+        </div>
+        <div class="top-center">
+            <div class="dropdown">
+                <a class="top" href="#">Mojang <span class="arrow"></span> </a>
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <h4>Jouer</h4>
+                        <a href="../minecraft/minecraft.html">Minecraft</a>
+                        <a href="../minecraftd/minecraftdun.html">Minecraft Dungeons</a>
+                    </div>
+                    <div class="dropdown-section">
+                        <h4>Découvrir</h4>
+                        <a href="../communaute/commu.html">Communauté</a>
+                        <a href="../ommudev/commudev.html">Communauté de développeurs</a>
+                    </div>
+                </div>
+            </div>
+            <div class="dropdown">
+              <a class="top" href="#">Boutique <span class="arrow"></span> </a>
+              <div class="dropdown-content">
+                  <div class="dropdown-section">
+                      <h4>Acheter</h4>
+                      <a href="boutique.html">Minecraft</a>
+                      <a href="../boutiqueMCDUN/boutiqueDU.html">Minecraft Dungeons</a>
+                  </div>
+              </div>
+            </div>
+            <a class="top" href="../actu/actu.html">Actu</a>
+            <div class="dropdown">
+                <a class="top" href="#">A Propos De Nous <span class="arrow"></span> </a>
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <h4>Nous Connaître</h4>
+                        <a href="../conseil/conseil.html">Entreprise</a>
+                        <a href="../vie/vie.html">Carrières chez Mojang</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            
+        <div class="top-right">
+            <button class="relief-button">Connexion</button>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+      <!-- Conteneur pour l'image principale -->
+      <div class="image-container">
+        <img class="main-image" src="pic/deluxe.avif" alt="Minecraft Image">
+      </div>
+    
+      <!-- Sélection des versions à droite -->
+      <div class="version-selection">
+        <img class="versionLOGO" src="PIC/mccc.avif" alt="Start"> 
+        <h2>Sélectionnez une version</h2>
+    
+        <div class="version-box selected" onclick="selectVersion('deluxe')">
+          <h3>Deluxe Collection</h3>
+          <p>39,99 €</p>
+          <p class="highlighted-text">Meilleur rapport qualité-prix</p>
+          <ul>
+            <li>- Minecraft : édition Java</li>
+            <li>- Minecraft : édition Bedrock</li>
+            <li>- Launcher Minecraft</li>
+            <li>- 1 600 Minecoins</li>
+            <li>- 5 cartes</li>
+            <li>- 3 packs de skins</li>
+            <li>- 1 pack de textures</li>
+          </ul>
+        </div>
+    
+        <div class="version-box" onclick="selectVersion('standard')">
+          <h3>Minecraft</h3>
+          <p>29,99 €</p>
+          <ul>
+            <li>- Minecraft : édition Java</li>
+            <li>- Minecraft : édition Bedrock</li>
+            <li>- Launcher Minecraft</li>
+          </ul>
+        </div>
+    
+        <div class="new-div-class">
+          <button class="new-button-class">Payer</button>
+        </div>
+    
+      </div>
+    </div>
+
+    <!-- Description dynamique du jeu -->
+    <div class="game-description" id="gameDescription">
+      <h3>Minecraft : éditions Java et Bedrock – Deluxe Collection</h3>
+      <p>En vente pour 39,99 € au cours des 30 derniers jours<br><br>
+        Découvrez toutes les différentes façons d’explorer, de survivre et de construire dans Minecraft avec Minecraft : Deluxe Collection pour PC avec Java et Bedrock et le launcher Minecraft inclus !
+        Jouez à l’édition Bedrock sur un PC pour parcourir une infinité de contenus créés par la communauté sur la Place de marché de Minecraft, découvrez de nouveaux styles de jeu grâce à différentes cartes et exprimez-vous avec des objets et des émotes du créateur de personnage.*<br><br>
+        <i>*Minecraft : édition Java s’exécute sur Windows, Mac et Linux ; Minecraft : édition Bedrock s’exécute sur Windows. Le contenu Deluxe Collection ne s’exécute que sur Minecraft : édition Bedrock sur Windows.</i></p>
+    </div>
+      
+
+    <div class="sliderMC">
+      <h2 class="slider-titleMC">CAPTURES D'ÉCRAN DU JEU</h2>
+    
+      <!-- Grande image principale -->
+      <div class="main-slideMC">
+        <img class="main-imageMC" src="pic/mc1.avif" alt="Main Image">
+      </div>
+    
+      <!-- Description de l'image -->
+      <p class="image-descriptionMC">Embarquez-vous dans une aventure commune ! Jouez avec vos amis en personne ou en ligne grâce au jeu multiplateforme.</p>
+    
+      <!-- Boutons pour naviguer -->
+      <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
+      <div class="next" onclick="moveSlide(1)">&#10095;</div>
+    
+      <!-- Miniatures en dessous du slider principal -->
+      <div class="thumbnail-containerMC">
+        <img src="pic/mc1.avif" alt="Thumbnail 1" onclick="selectSlide(0)" class="thumbnail">
+        <img src="pic/mc2.avif" alt="Thumbnail 2" onclick="selectSlide(1)" class="thumbnail">
+        <img src="pic/mc3.avif" alt="Thumbnail 3" onclick="selectSlide(2)" class="thumbnail">
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="comparison-container">
+      <h2 class="comparison-title">COMPAREZ LES FONCTIONNALITÉS PRINCIPALES DES ÉDITIONS JAVA ET BEDROCK DE MINECRAFT</h2>
+  
+      <table class="comparison-table">
+          <thead>
+              <tr>
+                  <th>Fonctionnalités</th>
+                  <th>Java</th>
+                  <th>Bedrock</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Compatibilité multiplateforme</td>
+                  <td>Jeu multiplateforme avec Windows, Mac et Linux</td>
+                  <td>Jeu multiplateforme sur Windows 10, Windows 11, Xbox, Nintendo Switch, PS5 et mobile</td>
+              </tr>
+              <tr>
+                  <td>Mode multijoueur avec écran fractionné</td>
+                  <td class="not-applicable">✗</td>
+                  <td class="not-applicable">✗</td>
+              </tr>
+              <tr>
+                  <td>Manette/support tactile</td>
+                  <td class="not-applicable">✗</td>
+                  <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                  <td>Place de marché de Minecraft</td>
+                  <td class="not-applicable">✗</td>
+                  <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Contenu téléchargeable (DLC)</td>
+                <td class="not-applicable">✗</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Mods</td>
+                <td class="applicable">✓</td>
+                <td class="not-applicable">✗</td>
+              </tr>
+              <tr>
+                <td>Realms</td>
+                <td class="applicable">✓</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Hébergez votre propre serveur</td>
+                <td class="applicable">✓</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Rejoignez des serveurs hébergés par d’autres joueurs</td>
+                <td class="applicable">✓</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Succès/Trophées</td>
+                <td class="not-applicable">✗</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Jeu en mode multijoueur via un réseau local ou une connexion Wi-Fi</td>
+                <td class="applicable">✓</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Contrôle parental avec le compte Microsoft</td>
+                <td class="not-applicable">✗</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <tr>
+                <td>Ray tracing</td>
+                <td class="not-applicable">✗</td>
+                <td class="applicable">✓</td>
+              </tr>
+              <!-- Ajoutez les autres lignes ici de manière similaire -->
+          </tbody>
+      </table>
+      <p><i>**Realms et Realms Plus nécessitent un abonnement payant.</i></p>
+    </div>
+
+
+
+
+
+
+        <div class="social-container">
+          <p class="social-title">SUIVRE MINECRAFT</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon">
+              <img src="PIC/yout.jpg" alt="YouTube">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="PIC/inst.jpg" alt="Instagram">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="PIC/face.jpg" alt="Facebook">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="PIC/x.jpg" alt="Twitter">
+            </a>
+            <a href="#" class="social-icon">
+              <img src="PIC/red.jpg" alt="Reddit">
+            </a>
+          </div>
+        </div>
+
+
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>JEUX</h4>
+                <a href="#">Minecraft</a>
+                <a href="#">Minecraft Dungeons</a>
+            </div>
+        <div class="footer-section">
+                <h4>DECOUVRIR</h4>
+                <a href="#">Mojang Games Store</a>
+                <a href="#">Communauté</a>
+                <a href="#">Produit Dérivés</a>
+        </div>
+        <div class="footer-section">
+                <h4>OUTILS</h4>
+                <a href="#">Minecraft Forge</a>
+                <a href="#">WorldEdit</a>
+        </div>
+        <div class="footer-section">
+                <h4>SUPPORT</h4>
+                <a href="#">Centre d'aide</a>
+                <a href="#">FAQ</a>
+                <a href="#">Support technique</a>
+        </div>
+            <div class="footer-section">
+                <h4>ENTREPRISE</h4>
+                <a href="#">À propos</a>
+                <a href="#">Mojang NewsRoom</a>
+                <a href="#">Emplois</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Mon Site Web. Tous droits réservés.</p>
+            <div class="footer-links">
+                <a href="#privacy">Politique de confidentialité</a>
+                <a href="#terms">Conditions d'utilisation</a>
+                <a href="#contact">Contact</a>
+                <img class="logofoot" src="PIC/logo.png">
+                <img class="logofoot" src="PIC/micro.svg.png">
+            </div>
+        </div>
+    </footer>
+
+    
+
+    <script src="boutique.js"></script>
+</body>
+</html>
