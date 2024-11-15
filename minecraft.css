@@ -8,11 +8,11 @@ body {
 
 @font-face {
     font-family: "CUSTOM";
-    src: url("../../FONT/MIN.woff2");
+    src: url("Projet/FONT/MIN.woff2");
 }
 @font-face {
     font-family: "NOTO";
-    src: url("../../FONT/noto.ttf");
+    src: url("Projet/FONT/noto.ttf");
 }
 
 .main-content {

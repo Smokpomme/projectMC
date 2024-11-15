@@ -5,56 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>commu</title>
     <link rel="stylesheet" href="commudev.css">
+    <script>
+        // Inclure le header
+        document.addEventListener('DOMContentLoaded', () => {
+            fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('header').innerHTML = data);
+              });
+      </script>
 </head>
 <body>
 
     <main class="main-content">
     <div class="header">
-        <div class="top-left">
-            <img class="logo" src="pic/mc.svg" alt="Start">
-        </div>
-        <div class="top-center">
-            <div class="dropdown">
-                <a class="top" href="#">Mojang <span class="arrow"></span> </a>
-                <div class="dropdown-content">
-                    <div class="dropdown-section">
-                        <h4>Jouer</h4>
-                        <a href="../../../index.html">Minecraft</a>
-                        <a href="../minecraftd/minecraftdun.html">Minecraft Dungeons</a>
-                    </div>
-                    <div class="dropdown-section">
-                        <h4>Découvrir</h4>
-                        <a href="../communaute/commu.html">Communauté</a>
-                        <a href="commudev.html">Communauté de développeurs</a>
-                    </div>
-                </div>
-            </div>
-            <div class="dropdown">
-                <a class="top" href="#">Boutique <span class="arrow"></span> </a>
-                <div class="dropdown-content">
-                    <div class="dropdown-section">
-                        <h4>Acheter</h4>
-                        <a href="../boutiqueMC/boutique.html">Minecraft</a>
-                        <a href="../boutiqueMCDUN/boutiqueDU.html">Minecraft Dungeons</a>
-                    </div>
-                </div>
-              </div>
-            <a class="top" href="../actu/actu.html">Actu</a>
-            <div class="dropdown">
-                <a class="top" href="#">A Propos De Nous <span class="arrow"></span> </a>
-                <div class="dropdown-content">
-                    <div class="dropdown-section">
-                        <h4>Nous Connaître</h4>
-                        <a href="../conseil/conseil.html">Entreprise</a>
-                        <a href="../vie/vie.html">Carrières chez Mojang</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="top-right">
-            <button class="relief-button">Connexion</button>
-        </div>
+        
     </div>
 
         
