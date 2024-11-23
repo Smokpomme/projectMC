@@ -4,7 +4,6 @@
     width: 100%;
     font-family: "NOTO";
     position: relative;
-    z-index: -1;
   }
   
   .footer-content {
@@ -36,8 +35,7 @@
   }
   
   .footer-section a:hover {
-    color: #fff; /* Texte blanc au survol */
-    text-decoration: underline;
+    color: #31ad00; /* Couleur verte au survol */
   }
   
   .footer-bottom {
@@ -50,15 +48,14 @@
   }
   
   .footer-links a {
-    color: #888;
+    color: #888; /* Couleur initiale des liens */
     margin: 0 15px;
-    text-decoration: none;
+    text-decoration: none; /* Pas de soulignement initial */
     font-size: 12px;
   }
-  
+
   .footer-links a:hover {
-    color: #fff; 
-    text-decoration: underline;
+    color: #cacaca; 
   }
   
   @media (max-width: 768px) {

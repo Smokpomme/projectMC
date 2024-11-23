@@ -12,6 +12,10 @@
                 .then(response => response.text())
                 .then(data => document.getElementById('header').innerHTML = data);
 
+            fetch('../social/social.html')
+                .then(response => response.text())
+                .then(data => document.getElementById('social').innerHTML = data);
+
             fetch('../footer/footer.html')
                 .then(response => response.text())
                 .then(data => document.getElementById('footer').innerHTML = data);
@@ -251,34 +255,8 @@
             </div>
         </div>
         
-        
-
-
-      
-
-        
-
-        <div class="social-container">
-          <p class="social-title">SUIVRE MINECRAFT</p>
-          <div class="social-icons">
-            <a href="#" class="social-icon">
-              <img src="pic/yout.jpg" alt="YouTube">
-            </a>
-            <a href="#" class="social-icon">
-              <img src="pic/inst.jpg" alt="Instagram">
-            </a>
-            <a href="#" class="social-icon">
-              <img src="pic/face.jpg" alt="Facebook">
-            </a>
-            <a href="#" class="social-icon">
-              <img src="pic/x.jpg" alt="Twitter">
-            </a>
-            <a href="#" class="social-icon">
-              <img src="pic/red.jpg" alt="Reddit">
-            </a>
-          </div>
-        </div>
-
+    
+        <div id="social"></div>
 
     </main>
 

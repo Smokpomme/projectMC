@@ -369,39 +369,6 @@ body {
   
   
   
-  .social-container {
-    background-color: #000000; /* Fond noir */
-    padding: 20px 0; /* Espacement interne */
-    text-align: center; /* Centrer le texte */
-  }
-  
-  .social-title {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Espacement entre les icônes */
-  }
-  
-  .social-icon img {
-    width: 40px; /* Taille des icônes */
-    height: 40px;
-    border-radius: 50%; /* Pour rendre les icônes circulaires */
-    padding: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .social-icon img:hover {
-    transform: scale(1.1); /* Agrandissement au survol */
-  }
-  
-  
   
   
 
