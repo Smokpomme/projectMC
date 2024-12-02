@@ -1,3 +1,4 @@
+@import url('vieresponsive.css');
 body {
     margin: 0;
     font-family: "CUSTOM";
@@ -102,26 +103,6 @@ body {
     text-decoration: none; /* Retire le soulignement au survol */
   }
   
-  /* Styles responsives pour les petits écrans */
-  @media (max-width: 768px) {
-    .faq-columns {
-        flex-direction: column; /* Passer en une colonne sur petit écran */
-        gap: 20px;
-    }
-  
-    .faq-title {
-        font-size: 36px;
-    }
-  
-    .faq-item h2 {
-        font-size: 20px;
-    }
-  
-    .faq-item p {
-        font-size: 14px;
-    }
-  }
-
 
 
 

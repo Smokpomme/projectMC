@@ -60,51 +60,68 @@ body {
 
 /* Conteneur principal */
 .collection-container {
-  display: grid;
-  gap: 20px;
-  padding: 10px 20px;
-  background-color: #041300; /* Fond noir pour l'ensemble du conteneur */
+
+  display: flex; /* Utilisation de Flexbox */
+  justify-content: space-between; /* Sépare les deux sections */
+  align-items: flex-start; /* Aligne les sections en haut */
+  gap: 20px; /* Espace entre le texte et le carrousel */
+  padding: 20px;
+  background-color: #041300; /* Fond noir */
 }
 
 /* Texte principal */
 .collection-text {
-  text-align: center;
+  flex: 1; /* Prend 1 part de l'espace disponible */
+  max-width: 40%; /* Limite la largeur de la section texte */
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  margin-left: 7px;
 }
 
 .collection-text h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
+  font-size: 2.5em; /* Texte plus petit */
+  margin-bottom: 10px; /* Réduit l'espacement en dessous */
   color: rgb(255, 255, 255); /* Texte blanc */
 }
 
 .collection-text p {
-  font-size: 1em;
-  margin-bottom: 20px;
-  color: black; /* Texte blanc */
-  
+  font-size: 1em; /* Texte explicatif */
+  color: #ccc; /* Texte gris clair */
+  line-height: 1.5;
+  padding-right: 150px;
 }
-
+.collection-text a{
+  color: #32cd32;
+  text-decoration: none;
+  font-size: 18px;
+  display: inline-block;
+}
+.collection-text a:hover{
+  transform: scale(1.02);
+  color: #29A629;
+  text-decoration: underline;
+  font-size: 1.2em;
+}
 
 /* Carrousel */
 .list {
   display: flex;
-  gap: 90px;
-  padding: 16px;
+  gap: 10px; /* Espace réduit entre les items */
   list-style: none;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  overflow: hidden;
-  width: 100%; /* S'assure que la largeur soit à 100% */
+  overflow-x: auto;
+  width: 100%;
+  /* Apparence de la barre de défilement */
+  scrollbar-width: thin; /* Barre de défilement fine pour Firefox */
+  scrollbar-color: #327734 #041300; /* Couleur de la barre de défilement (la barre et le fond de la barre) */
 }
 
 .item {
   flex-shrink: 0;
-  width: 60%; 
-  min-height: 70vh; 
+  width: 100%; /* Réduit la largeur des items */
+  min-height: 40vh; /* Réduit la hauteur minimale */
   transition: transform 0.5s ease-in-out;
   scroll-snap-align: center;
   position: relative;
@@ -113,106 +130,51 @@ body {
 
 .img_li {
   width: 100%;
-  height: auto; /* Laisser l'image s'ajuster automatiquement */
-  max-height: 60vh; /* Limite l'image à 60% de la hauteur de l'écran */
+  height: auto;
+  max-height: 45vh; /* Limite l'image à 30% de la hauteur de l'écran */
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Légère ombre */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre */
 }
 
 /* Description */
 .description {
   width: 100%;
   text-align: left;
-  padding: 8px 0;
-  font-size: 1rem; /* Taille du texte */
+  padding: 5px 0;
+  font-size: 0.8rem; /* Taille de texte réduite */
   box-sizing: border-box;
-  max-width: 90%; /* Limiter la largeur pour un meilleur affichage */
-  margin: 0 auto; /* Centrer la description */
-  color: white; /* Texte blanc */
+  max-width: 90%;
+  margin: 0 auto;
+  color: white;
   font-family: 'NOTO';
 }
-.description h1{
+
+.description h1 {
   font-family: 'CUSTOM';
-  font-size: 2.2rem;
-
-
+  font-size: 1.5rem; /* Réduit la taille du titre */
 }
+
+/* Contenu */
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrer horizontalement */
-  justify-content: flex-start; /* Aligner vers le haut */
+  align-items: center;
+  justify-content: flex-start;
   height: 100%;
   background-color: #3d3d3d;
 }
 
 /* Conteneur du carrousel */
 .list-wrapper {
-  position: relative; 
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex: 2; /* Prend 2 parts de l'espace disponible */
+  max-width: 60%; /* Limite la largeur de la section carrousel */
   display: flex;
-  align-items: center; /* Alignement vertical des boutons */
-  
+  align-items: center;
+  overflow: hidden;
 }
 
-/* Boutons du carrousel */
-.button {
-  position: absolute;
-  top: 50%;
-  width: 4rem;
-  height: 4rem;
-  transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.0); /* Fond semi-transparent pour ne pas masquer trop l'image */
-  color: white;
-  border: none;
-  cursor: pointer;
-  z-index: 2;
-  display: flex; 
-  align-items: center; 
-  justify-content: center;
-  transition: background-color 0.3s ease; /* Transition fluide sur le hover */
-}
 
-.button--previous {
-  left: 1rem; /* Placé à gauche, légèrement à l'intérieur du carrousel */
-}
 
-/* Bouton suivant */
-.button--next {
-  right: 1rem; /* Placé à droite, légèrement à l'intérieur du carrousel */
-}
-
-/* Effet au survol (hover) */
-.button:hover::before {
-  border-color: #4CAF50; /* Couleur de la flèche lors du survol */
-}
-
-/* Flèche à l'intérieur des boutons */
-.button::before {
-  content: '';
-  display: inline-block;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  padding: 8px;
-  transform: rotate(45deg);
-}
-
-/* Flèche directionnelle pour le bouton précédent */
-.button--previous::before {
-  transform: rotate(135deg); /* Flèche pointant vers la gauche */
-}
-
-/* Flèche directionnelle pour le bouton suivant */
-.button--next::before {
-  transform: rotate(-45deg); /* Flèche pointant vers la droite */
-}
-
-/* Masquer les flèches quand elles sont désactivées */
-.button:disabled {
-  display: none;
-}
 
 /* Adaptation pour les petits écrans */
 @media (max-width: 768px) {

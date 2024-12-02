@@ -39,10 +39,19 @@
 
         
 
-        <div class="collection-container">
+   
             <div class="collection-container">
                   <div class="collection-text">
-                    <h1>Build en Vedette</h1>
+                    <h1>BUILD VEDETTE</h1>
+                    <p class="explanatory-text">
+                        Découvrez les créations incroyables de notre communauté. Chaque build est une œuvre unique, pleine de créativité et d'ingéniosité. Plongez dans ces mondes fantastiques ! 
+                        <br><br>
+                        Chaque semaine, envoyez-nous vos créations, qu'elles soient gigantesques ou petites, détaillées ou non, vertes, rouges ou bleues ! Tentez de figurer chaque semaine sur notre page de builds hebdomadaire et gagnez en visibilité. Que vous soyez un nouveau builder ou un vétéran, c'est votre chance de briller !
+                        <br><br>
+                        Que le meilleur gagne !<br>
+                        
+                        <a href="/Projet/src/communaute/commu.html#share">Envoyez nous vos build !</a>
+                    </p>
                   </div>
           <!-- Carrousel -->
           <div class="list-wrapper">
@@ -50,7 +59,7 @@
               <li class="item">
                 <div class="content">
                   <img src="pic/1.jpg" alt="" class="img_li">
-                  <div class="description">
+                  <div class="description" id="lune">
                     <h1>Maison dans une Lune</h1>
                     <p><i>"J'ai voulu créer quelque chose d'original, car j'en avais marre de construire des maisons au sol tout le temmps. Le seul problème, c'est : comment monter dans ma maison ?"</i><strong>by BuildWizard</strong></p>
                   </div>
@@ -59,7 +68,7 @@
               <li class="item">
                 <div class="content">
                   <img src="pic/2.jpg" alt="" class="img_li">
-                  <div class="description">
+                  <div class="description" id="portail">
                     <h1>Portail remonter de l'eau</h1>
                     <p><i>"Un étrange portail a été remonté de l'eau hier dans l'après-midi. Les villageois et moi ne savons pas quoi faire, nous entendons des bruits très étranges émanant de ce portail."</i><strong>by EnderExplorer</strong></p>
                   </div>
@@ -68,7 +77,7 @@
               <li class="item">
                 <div class="content">
                   <img src="pic/3.jpg" alt="" class="img_li">
-                  <div class="description">
+                  <div class="description" id="temple">
                     <h1>Temple dans la Jungle</h1>
                     <p><i>"J'ai voulu rendre hommage aux villageois qui se sont perdus dans la jungle, alors j'ai construit un temple en leur honneur."</i><strong>by CraftMaster</strong></p>
                   </div>
@@ -77,7 +86,7 @@
               <li class="item">
                 <div class="content">
                   <img src="pic/4.jpg" class="img_li">
-                  <div class="description">
+                  <div class="description" id="arbre">
                     <h1>Maison sur un Arbre</h1>
                     <p><i>"J'aime beaucoup les elfes, donc j'ai décidé de vivre comme eux, c'est-à-dire dans un arbre !"</i><strong>by CreeperHunter</strong></p>
                   </div>
@@ -85,11 +94,9 @@
               </li>
             </ul>
 
-            <button onclick="handleClick('previous')" class="button button--previous" type="button"></button>
-            <button onclick="handleClick('next')" class="button button--next" type="button"></button>
           </div>
         </div>
-      </div>
+      
 
         
 
@@ -243,7 +250,7 @@
 
 
 
-      <div class="share">
+      <div class="share" id="share">
         <div class="earth-icon">
             <img src="pic/mc.avif" alt="">
         </div>

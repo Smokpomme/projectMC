@@ -1,0 +1,140 @@
+/* MEDIA QUERIES POUR LA RESPONSIVITÉ */
+
+/* Tablettes portrait (min-width: 768px) */
+@media (max-width: 1024px) {
+    .main-image {
+      height: 60vh;
+    }
+  
+    .description-container {
+      max-width: 70%;
+      bottom: 10px;
+    }
+  
+    .thumbnails {
+      bottom: 10px;
+      right: 10px;
+      gap: 8px;
+    }
+  
+    .thumbnail {
+      width: 80px;
+      height: 50px;
+    }
+  
+    .carousel-container {
+      height: auto;
+      padding: 10px;
+    }
+  
+    .community-creations h2 {
+      font-size: 28px;
+    }
+  
+    .creations-grid {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+  
+    .collection-container {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .collection-items {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .collection-text h1 {
+      font-size: 2em;
+    }
+  
+    .collection-text p {
+      font-size: 1em;
+    }
+  }
+  
+  /* Mobile portrait (max-width: 768px) */
+  @media (max-width: 768px) {
+    .main-image {
+      height: 50vh;
+    }
+  
+    .description-container {
+      max-width: 90%;
+      bottom: 10px;
+    }
+  
+    .thumbnails {
+      flex-wrap: wrap;
+      bottom: 10px;
+      right: 10px;
+    }
+  
+    .thumbnail {
+      width: 70px;
+      height: 40px;
+    }
+  
+    .community-creations h2 {
+      font-size: 24px;
+    }
+  
+    .creations-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .collection-container {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  
+    .collection-items {
+      flex-direction: column;
+    }
+  
+    .collection-text h1 {
+      font-size: 1.8em;
+    }
+  
+    .collection-text p {
+      font-size: 0.9em;
+    }
+  }
+  
+  /* Très petit écran, mobile (max-width: 480px) */
+  @media (max-width: 480px) {
+    .main-image {
+      height: 40vh;
+    }
+  
+    .description-container {
+      max-width: 80%;
+    }
+  
+    .carousel-container {
+      padding: 5px;
+    }
+  
+    .community-creations h2 {
+      font-size: 20px;
+    }
+  
+    .creations-grid {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+  
+    .collection-text h1 {
+      font-size: 1.5em;
+    }
+  
+    .collection-text p {
+      font-size: 0.9em;
+    }
+  
+    .item img {
+      height: 180px;
+    }
+  }

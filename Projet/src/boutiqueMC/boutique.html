@@ -29,7 +29,7 @@
 
 
 
-    <div class="container">
+    <div class="container" id="boutiqueMC">
       <!-- Conteneur pour l'image principale -->
       <div class="image-container">
         <img class="main-image" src="pic/deluxe.avif" alt="Minecraft Image">
@@ -66,8 +66,17 @@
         </div>
     
         <div class="new-div-class">
-          <button class="new-button-class">Payer</button>
-        </div>
+          <button class="new-button-class" id="payButton">Payer</button>
+      </div>
+      
+      <!-- Popup -->
+      <div class="popup" id="payPopup">
+          <div class="popup-content">
+              <span class="popup-close" id="payPopupClose">&times;</span>
+              <h2>Paiement en cours...</h2>
+              <p>Cette fonctionnalité n'est pas encore disponible. Merci de revenir plus tard.</p>
+          </div>
+      </div>
     
       </div>
     </div>

@@ -29,3 +29,39 @@
   .social-icon img:hover {
     transform: scale(1.1); /* Agrandissement au survol */
   }
+
+  /* Responsive : adaption des tailles et de la disposition sur mobile */
+@media (max-width: 768px) {
+  .social-title {
+      font-size: 16px; /* Réduction de la taille du titre */
+      margin-bottom: 10px; /* Réduire l'espace sous le titre */
+  }
+
+  .social-icons {
+      gap: 10px; /* Réduction de l'écart entre les icônes */
+  }
+
+  .social-icon img {
+      width: 35px; /* Réduction de la taille des icônes */
+      height: 35px;
+      padding: 8px; /* Réduire l'espacement intérieur */
+  }
+}
+
+/* Responsive pour les très petits écrans (ex. mobile portrait) */
+@media (max-width: 480px) {
+  .social-title {
+      font-size: 14px; /* Réduction de la taille du titre pour les écrans très petits */
+      margin-bottom: 8px; /* Réduction de l'espace sous le titre */
+  }
+
+  .social-icons {
+      gap: 8px; /* Réduction de l'écart entre les icônes */
+  }
+
+  .social-icon img {
+      width: 30px; /* Réduction de la taille des icônes */
+      height: 30px;
+      padding: 6px; /* Réduire l'espacement intérieur */
+  }
+}

@@ -88,7 +88,7 @@
     <div class="creations-grid">
         <!-- Image 1 -->
         <div class="creation-card">
-            <img src="pic/A1.jpg" alt="Construction Monumentale" class="creation-image">
+            <img src="pic/A1.jpg" alt="Construction Monumentale" class="creation-image" onclick="showPopup()">
             <div class="creation-info">
                 <h3>contenus</h3>
                 <p>Accroche désormais n’importe quel objet sur tes pancartes !</p>
@@ -97,7 +97,7 @@
 
         <!-- Image 2 -->
         <div class="creation-card">
-            <img src="pic/A2.jfif" alt="Explorations en Forêt" class="creation-image">
+            <img src="pic/A2.jfif" alt="Explorations en Forêt" class="creation-image" onclick="showPopup()">
             <div class="creation-info">
                 <h3>actualités</h3>
                 <p>Nouvelle mise à jour sur Minecraft Dungeons : tous les problèmes récents sont corrigés !</p>
@@ -106,7 +106,7 @@
 
         <!-- Image 3 -->
         <div class="creation-card">
-            <img src="pic/A3.jpg" alt="Costumes et Skins" class="creation-image">
+            <img src="pic/A3.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
             <div class="creation-info">
                 <h3>contenus</h3>
                 <p>Nouveau skin disponible sur le Marketplace !</p>
@@ -115,7 +115,7 @@
 
         <!-- Image 4 -->
         <div class="creation-card">
-            <img src="pic/A4.jpg" alt="Costumes et Skins" class="creation-image">
+            <img src="pic/A4.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
             <div class="creation-info">
                 <h3>contenus</h3>
                 <p>Des portails sont désormais disponibles partout dans l'Overworld !</p>
@@ -124,7 +124,7 @@
 
         <!-- Image 5 -->
         <div class="creation-card">
-            <img src="pic/A5.avif" alt="Costumes et Skins" class="creation-image">
+            <img src="pic/A5.avif" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
             <div class="creation-info">
                 <h3>actualités</h3>
                 <p>Une nouvelle mise à jour, la 1.21, est disponible avec de nouveaux donjons !</p>
@@ -133,7 +133,7 @@
         
         <!-- Image 6 -->
         <div class="creation-card">
-            <img src="pic/A6.avif" alt="Costumes et Skins" class="creation-image">
+            <img src="pic/A6.avif" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
             <div class="creation-info">
                 <h3>actualités</h3>
                 <p>Minecraft Education vous apprend tout sur la vie et la faune de Minecraft !</p>
@@ -142,7 +142,7 @@
 
         <!-- Image 7 -->
         <div class="creation-card">
-            <img src="pic/A7.jpg" alt="Costumes et Skins" class="creation-image">
+            <img src="pic/A7.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
             <div class="creation-info">
                 <h3>actualités</h3>
                 <p>Les chunks sont désormais plus diversifiés grâce à nos développeurs !</p>
@@ -151,7 +151,7 @@
 
         <!-- Image 8 -->
         <div class="creation-card">
-            <img src="pic/A8.jpg" alt="Costumes et Skins" class="creation-image">
+            <img src="pic/A8.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
             <div class="creation-info">
                 <h3>actualités</h3>
                 <p>Les grottes sont désormais aussi verdoyantes que l'Overworld !</p>
@@ -160,7 +160,7 @@
 
         <!-- Image 9 -->
         <div class="creation-card">
-            <img src="pic/A9.avif" alt="Costumes et Skins" class="creation-image">
+            <img src="pic/A9.avif" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
             <div class="creation-info">
                 <h3>actualités</h3>
                 <p>Le PvP a une nouvelle vie : apprenez à combattre à nouveau !</p>
@@ -171,6 +171,15 @@
         <!-- Ajoute plus d'images si besoin -->
     </div>
 </section>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+  <div class="popup-content">
+      <span class="popup-close" onclick="closePopup()">&times;</span>
+      <h2>Page non disponible</h2>
+      <p>La page des actualités de développement et des contenues n'est pas encore disponible. Revenez plus tard !</p>
+  </div>
+</div>
 
         
 

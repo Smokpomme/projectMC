@@ -213,3 +213,89 @@ button.relief-button {
 button.relief-button:hover {
     background-color: rgb(51, 133, 40);
 }
+
+/* Mobile View */
+@media (max-width: 768px) {
+  /* Header */
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 15px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .top {
+    margin: 5px;
+    font-size: 14px;
+  }
+
+  .top-center {
+    flex: 1;
+    margin-top: 10px;
+  }
+
+  .top-right {
+    margin-top: 10px;
+  }
+
+  .top-right .relief-button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+
+  .dropdown-content {
+    width: 100%;
+    left: 0;
+  }
+
+  /* Dropdown Arrow */
+  .top .arrow {
+    display: none;
+  }
+
+  /* Popup */
+  .popup-content {
+    width: 90%;
+    max-width: 100%;
+    padding: 15px;
+  }
+
+  .form-group input {
+    padding: 10px;
+  }
+
+  button.relief-button {
+    padding: 12px;
+  }
+}
+
+/* Tablet View */
+@media (max-width: 1024px) {
+  /* Header */
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .logo {
+    width: 170px;
+  }
+
+  .top {
+    font-size: 16px;
+  }
+
+  .top-right .relief-button {
+    font-size: 15px;
+    padding: 9px 18px;
+  }
+
+  /* Dropdown Menu */
+  .dropdown-content {
+    width: 250px;
+  }
+}
+

@@ -71,3 +71,30 @@ function selectSlide(index) {
 
 // Afficher la première slide par défaut
 showSlide(currentSlide);
+
+// Assurer que le popup est caché à l'ouverture de la page
+window.onload = function() {
+  document.getElementById('payPopup').style.display = 'none';
+};
+
+// Récupérer les éléments
+const payButton = document.getElementById('payButton');
+const payPopup = document.getElementById('payPopup');
+const payPopupClose = document.getElementById('payPopupClose');
+
+// Afficher le popup uniquement lorsque le bouton "Payer" est cliqué
+payButton.addEventListener('click', function() {
+    payPopup.style.display = 'flex'; // Afficher le popup
+});
+
+// Fermer le popup lorsque l'utilisateur clique sur la croix
+payPopupClose.addEventListener('click', function() {
+    payPopup.style.display = 'none'; // Cacher le popup
+});
+
+// Fermer le popup si l'utilisateur clique en dehors du popup
+window.addEventListener('click', function(event) {
+    if (event.target === payPopup) {
+        payPopup.style.display = 'none'; // Cacher le popup si on clique en dehors
+    }
+});

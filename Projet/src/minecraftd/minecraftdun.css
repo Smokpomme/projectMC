@@ -1,3 +1,4 @@
+@import url('mcdunresponsive.css');
 body {
   margin: 0;
   font-family: "CUSTOM";
@@ -348,30 +349,6 @@ body {
   display: none;
 }
 
-/* Adaptation pour les petits écrans */
-@media (max-width: 768px) {
-  .button {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .img_li {
-    max-height: 50vh; /* Ajuster la hauteur de l'image pour les écrans mobiles */
-  }
-
-  .list {
-    gap: 30px; /* Réduire l'écart entre les images sur mobile */
-  }
-}
-
-
-
-
-
-
-
-
-
 
 
 .platforms-container {
@@ -392,16 +369,16 @@ body {
 
 .platforms-grid {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 70px;
 }
 
 .platform-icon {
   width: 30px; /* Adjust this value as needed */
   height: auto; /* Maintain aspect ratio */
   display: block; /* Ensures the image behaves like a block element */
-  margin: 0 auto; /* Centers the image horizontally */
+  margin:  auto; /* Centers the image horizontally */
 }
 
 
@@ -477,8 +454,6 @@ body {
   color: white; /* Couleur du texte au survol */
   text-decoration: underline; /* Surlignage au survol */
 }
-
-
 
 
 

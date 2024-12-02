@@ -55,15 +55,11 @@
           <p>Apprenez à créer des mods Minecraft avec des add-ons. Créez des skins, concevez des expériences uniques, découvrez les dernières fonctionnalités et développez vos compétences en tant que créateur Minecraft.</p>
       </div>
       <div class="share-button">
+        <a href="/Projet/src/commudev/commudev.html#community" class="platform-item">
         <button class="relief-button">En Savoir Plus</button>
+        </a>
       </div>
       </div>
-
-
-
-
-
-
 
       <div class="carousel-container">
         <div class="carousel-description">
@@ -101,7 +97,7 @@
 
 
   
-        <section class="community-creations">
+        <section class="community-creations" id="community">
             <h2 class="section-title">Actualités des créateurs</h2>
             <p class="section-description">
                 Voici l'actualité des créateurs de contenu, peut-être que certaines d'entre elles vous intéresseront !
@@ -109,7 +105,7 @@
             <div class="creations-grid">
                 <!-- Image 1 -->
                 <div class="creation-card">
-                    <img src="pic/Z1.avif" alt="Construction Monumentale" class="creation-image">
+                    <img src="pic/Z1.avif" alt="Construction Monumentale" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
                         <h3>guides</h3>
                         <p>Voici le fonctionnement complet des villages ainsi que l'apparition de ces derniers et des golems de fer..</p>
@@ -118,7 +114,7 @@
         
                 <!-- Image 2 -->
                 <div class="creation-card">
-                    <img src="pic/Z2.png" alt="Explorations en Forêt" class="creation-image">
+                    <img src="pic/Z2.png" alt="Explorations en Forêt" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
                         <h3>actualités</h3>
                         <p>Une nouvelle application Minecraft qui va révolutionner votre façon de jouer.</p>
@@ -127,7 +123,7 @@
         
                 <!-- Image 3 -->
                 <div class="creation-card">
-                    <img src="pic/Z3.jpg" alt="Costumes et Skins" class="creation-image">
+                    <img src="pic/Z3.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
                         <h3>guides</h3>
                         <p>Tuto complet sur l'End, son fonctionnement et les End Cities.</p>
@@ -136,7 +132,7 @@
         
                 <!-- Image 4 -->
                 <div class="creation-card">
-                    <img src="pic/Z4.jpg" alt="Costumes et Skins" class="creation-image">
+                    <img src="pic/Z4.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
                         <h3>guides</h3>
                         <p>Tuto complet sur la redstone, son fonctionnement et les différentes dérivées.</p>
@@ -145,7 +141,7 @@
         
                 <!-- Image 5 -->
                 <div class="creation-card">
-                    <img src="pic/Z5.jpg" alt="Costumes et Skins" class="creation-image">
+                    <img src="pic/Z5.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
                         <h3>actualités</h3>
                         <p>Nouveau live sur les nouveautés de la version 1.20.1.</p>
@@ -154,7 +150,7 @@
                 
                 <!-- Image 6 -->
                 <div class="creation-card">
-                    <img src="pic/Z6.jpg" alt="Costumes et Skins" class="creation-image">
+                    <img src="pic/Z6.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
                         <h3>actualités</h3>
                         <p>Un Minecraft plus beau qu'il ne l'est déjà : découvrez le nouveau meilleur shader..</p>
@@ -163,7 +159,7 @@
 
                 <!-- Image 7 -->
                 <div class="creation-card">
-                    <img src="pic/Z7.png" alt="Costumes et Skins" class="creation-image">
+                    <img src="pic/Z7.png" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
                         <h3>guides</h3>
                         <p>Coder Minecraft en Scratch, est-ce possible ?</p>
@@ -172,7 +168,7 @@
 
                 <!-- Image 8 -->
                 <div class="creation-card">
-                    <img src="pic/Z8.jpg" alt="Costumes et Skins" class="creation-image">
+                    <img src="pic/Z8.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
                         <h3>guides</h3>
                         <p>Tuto complet pour apprendre à coder des add-ons sur Minecraft de A à Z.</p>
@@ -181,7 +177,7 @@
 
                 <!-- Image 9 -->
                 <div class="creation-card">
-                    <img src="pic/Z9.jpg" alt="Costumes et Skins" class="creation-image">
+                    <img src="pic/Z9.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
                         <h3>actualités</h3>
                         <p>Le meilleur pack de textures pour vos vidéos YouTube !</p>
@@ -192,6 +188,16 @@
                 <!-- Ajoute plus d'images si besoin -->
             </div>
         </section>
+
+        <!-- Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span class="popup-close" onclick="closePopup()">&times;</span>
+                <h2>Page non disponible</h2>
+                <p>La page des actualités de développement et des guides n'est pas encore disponible. Revenez plus tard !</p>
+            </div>
+        </div>
+
         
 
 
