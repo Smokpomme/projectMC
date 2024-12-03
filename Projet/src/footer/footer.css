@@ -57,7 +57,14 @@
   .footer-links a:hover {
     color: #cacaca; 
   }
-  
+  .logofoot1{
+    width: 30px;
+  }
+  .logofoot2{
+    width: 140px;
+    padding-left: 20px;
+  }
+ 
 /* Desktop: 1600x992px scaled down to scale(0.3181) */
 @media (min-width: 1281px) {
   .footer-content {

@@ -259,9 +259,19 @@
           <p>N’hésitez pas à nous contacter ! Faites-nous savoir comment vous utilisez le pouvoir de Minecraft pour construire un monde meilleur. Peu importe que vous organisiez une fête avec un message positif ou que vous utilisiez Minecraft pour améliorer votre nation ! Chaque geste compte.</p>
       </div>
       <div class="share-button">
-        <button class="relief-button">Envoyez vos Histoires</button>
+        <button class="relief-button" onclick="showPopup()">Envoyez vos Histoires</button>
       </div>
       </div>
+
+   <!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <!-- Icône de fermeture -->
+        <span class="popup-close" onclick="closePopup()">&times;</span>
+        <h2>Page non disponible</h2>
+        <p>La page de partage d'histoires n'est pas encore disponible. Revenez plus tard !</p>
+    </div>
+</div>
 
       <div id="social"></div>
 

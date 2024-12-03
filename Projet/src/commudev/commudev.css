@@ -366,7 +366,6 @@ body {
   
   
  /* Style du Popup */
-/* Style du Popup */
 .popup {
   display: none; /* Le popup est caché par défaut */
   position: fixed;
@@ -387,6 +386,7 @@ body {
   border-radius: 10px;
   max-width: 500px;
   text-align: center;
+  position: relative; /* Ajoutez cette ligne pour positionner la croix à l'intérieur du contenu */
 }
 
 /* Bouton de fermeture */
@@ -394,7 +394,7 @@ body {
   font-size: 30px;
   color: #000;
   cursor: pointer;
-  position: absolute;
+  position: absolute; /* Positionnement absolu pour placer la croix en haut à droite */
   top: 10px;
   right: 10px;
 }

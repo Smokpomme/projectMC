@@ -12,9 +12,9 @@ function selectVersion(version) {
   // Changer l'image principale en fonction de la version
   const mainImage = document.querySelector('.main-image');
   if (version === 'deluxe') {
-    mainImage.src = 'PIC/deluxe.avif'; // Remplace par le chemin de l'image Deluxe
+    mainImage.src = 'PIC/deluxe1.jpg'; // Remplace par le chemin de l'image Deluxe
   } else if (version === 'standard') {
-    mainImage.src = 'PIC/normal.jpg'; // Remplace par le chemin de l'image Standard
+    mainImage.src = 'PIC/standars1.jpg'; // Remplace par le chemin de l'image Standard
   }
 
   // Changer la description en fonction de la version
