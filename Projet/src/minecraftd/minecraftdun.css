@@ -1,4 +1,3 @@
-@import url('mcdunresponsive.css');
 body {
   margin: 0;
   font-family: "CUSTOM";
@@ -456,9 +455,167 @@ body {
 }
 
 
+/* Responsive Styles */
 
+/* Desktop (≥1281px) */
+@media (min-width: 1281px) {
+  .carousel-container {
+    height: auto;
+    padding: 20px 0;
+  }
+  .main-image {
+    height: 115vh;
+  }
+  .description-container {
+    max-width: 40%;
+    font-size: 1rem;
+  }
+  .thumbnails {
+    gap: 10px;
+  }
+  .community-creations h2 {
+    font-size: 36px;
+  }
+  .collection-text h1 {
+    font-size: 3em;
+  }
+  .item {
+    width: 60%;
+    min-height: 70vh;
+  }
+  .platforms-grid {
+    gap: 70px;
+  }
+  .platform-item p {
+    font-size: 1.1em;
+  }
+  .News_title {
+    font-size: 2.5em;
+  }
+}
 
+/* Laptop (1280px to 769px) */
+@media (max-width: 1280px) and (min-width: 769px) {
+  .carousel-container {
+    padding: 15px 0;
+  }
+  .main-image {
+    height: 90vh;
+  }
+  .description-container {
+    max-width: 60%;
+    font-size: 0.9rem;
+  }
+  .thumbnails {
+    gap: 8px;
+  }
+  .community-creations h2 {
+    font-size: 32px;
+  }
+  .collection-text h1 {
+    font-size: 2.5em;
+  }
+  .item {
+    width: 70%;
+    min-height: 60vh;
+  }
+  .platforms-grid {
+    gap: 50px;
+  }
+  .platform-item p {
+    font-size: 1em;
+  }
+  .News_title {
+    font-size: 2.2em;
+  }
+}
 
+/* Tablet (768px to 481px) */
+@media (max-width: 768px) and (min-width: 481px) {
+  .carousel-container {
+    padding: 10px 0;
+  }
+  .main-image {
+    height: 70vh;
+  }
+  .description-container {
+    max-width: 80%;
+    font-size: 0.85rem;
+  }
+  .thumbnails {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .community-creations h2 {
+    font-size: 28px;
+  }
+  .collection-text h1 {
+    font-size: 2em;
+  }
+  .item {
+    width: 80%;
+    min-height: 50vh;
+  }
+  .platforms-grid {
+    gap: 30px;
+  }
+  .platform-item p {
+    font-size: 0.9em;
+  }
+  .News_title {
+    font-size: 2em;
+  }
+  .News_p {
+    font-size: 0.9em;
+  }
+}
 
-
+/* Mobile (≤480px) */
+@media (max-width: 480px) {
+  .carousel-container {
+    padding: 10px 0;
+  }
+  .main-image {
+    height: 50vh;
+  }
+  .description-container {
+    max-width: 100%;
+    font-size: 0.8rem;
+  }
+  .thumbnails {
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .thumbnail {
+    width: 100px;
+    height: 80px;
+  }
+  .community-creations h2 {
+    font-size: 24px;
+  }
+  .collection-text h1 {
+    font-size: 1.5em;
+  }
+  .item {
+    width: 90%;
+    min-height: 40vh;
+  }
+  .platforms-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .platform-item p {
+    font-size: 0.8em;
+  }
+  .News_title {
+    font-size: 1.8em;
+  }
+  .News_p {
+    font-size: 0.8em;
+  }
+  .buy-now-button {
+    padding: 8px 16px;
+    font-size: 0.9em;
+  }
+}
 

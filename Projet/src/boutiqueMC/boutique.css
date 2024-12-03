@@ -193,18 +193,6 @@ body {
     transform: translateY(2px);
 }
   
-  /* Responsivité */
-  @media (max-width: 768px) {
-    .version-selection, .description-box {
-      width: 90%;
-      left: 5%;
-      right: 5%;
-    }
-  
-    .main-image {
-      width: 100%;
-    }
-  }
 
 
   /* Style de la description du jeu */
@@ -469,7 +457,227 @@ body {
 }
 
 
-  
+  /* Desktop */
+@media (min-width: 1281px) {
+  body {
+    font-size: 16px;
+  }
+  .main-content {
+    min-height: 200vh;
+  }
+  .image-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .description-box, .version-selection {
+    width: 350px;
+  }
+
+  .description-box h2, .version-selection h2 {
+    font-size: 1.5em;
+  }
+
+  .description-box p, .version-box p, .version-box ul li {
+    font-size: 1em;
+  }
+
+  .version-box {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 2px solid transparent;
+    background-color: #111;
+    border-top-color: rgba(104, 104, 104, 0.9);
+    border-right-color: rgba(104, 104, 104, 0.9);
+    border-bottom-color: rgba(0, 0, 0, 0.9);
+    border-left-color: rgba(0, 0, 0, 0.9);
+    border-style: solid;
+  }
+
+  .game-description {
+    padding-left: 300px;
+    padding-right: 500px;
+    padding-bottom: 10px;
+  }
+
+  .sliderMC {
+    padding-left: 300px;
+    padding-right: 500px;
+  }
+
+  .creations-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .creation-card {
+    max-width: 300px;
+    padding: 15px;
+  }
+
+  .popup-content {
+    width: 400px;
+  }
+
+  .new-button-class {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+}
+
+/* Laptop */
+@media (max-width: 1280px) and (min-width: 769px) {
+  body {
+    font-size: 15px;
+  }
+  .main-content {
+    min-height: 180vh;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .description-box, .version-selection {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+
+  .version-box {
+    margin-bottom: 20px;
+    padding: 15px;
+  }
+
+  .creations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .creation-card {
+    max-width: 250px;
+  }
+
+  .game-description {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .sliderMC {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  .new-button-class {
+    font-size: 15px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) and (min-width: 481px) {
+  body {
+    font-size: 14px;
+  }
+  .main-content {
+    min-height: 250vh;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .description-box, .version-selection {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+
+  .description-box h2, .version-selection h2 {
+    font-size: 1.3em;
+  }
+
+  .description-box p, .version-box p, .version-box ul li {
+    font-size: 0.9em;
+  }
+
+  .creations-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .creation-card {
+    max-width: 250px;
+  }
+
+  .game-description {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .sliderMC {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .new-button-class {
+    font-size: 14px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+  .main-content {
+    min-height: 280vh;
+  }
+
+  .image-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .description-box, .version-selection {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
+
+  .description-box h2, .version-selection h2 {
+    font-size: 1.2em;
+  }
+
+  .description-box p, .version-box p, .version-box ul li {
+    font-size: 0.8em;
+  }
+
+  .creations-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .creation-card {
+    max-width: 200px;
+  }
+
+  .game-description {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .sliderMC {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .new-button-class {
+    font-size: 13px;
+  }
+}
+
   
   
   

@@ -400,5 +400,137 @@ text-decoration: none;
   }
   
   
-  
+  /* Responsiveness */
+@media (min-width: 1281px) { /* Desktop */
+  body {
+    font-size: 16px;
+  }
+  .main-content {
+    min-height: 200vh;
+  }
+  .minecraft-news-title {
+    font-size: 48px;
+  }
+  .community-creations h2 {
+    font-size: 36px;
+  }
+  .creations-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .creation-card {
+    max-width: 300px;
+    padding: 15px;
+  }
+  .carousel-description h2 {
+    font-size: 50px;
+  }
+  .carr-slide a {
+    font-size: 14px;
+  }
+  .social-icon img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 769px) { /* Laptop */
+  body {
+    font-size: 15px;
+  }
+  .main-content {
+    min-height: 180vh;
+  }
+  .minecraft-news-title {
+    font-size: 42px;
+  }
+  .community-creations h2 {
+    font-size: 32px;
+  }
+  .creations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .creation-card {
+    max-width: 280px;
+    padding: 10px;
+  }
+  .carousel-description h2 {
+    font-size: 44px;
+  }
+  .carr-slide a {
+    font-size: 13px;
+  }
+  .social-icon img {
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) { /* Tablet */
+  body {
+    font-size: 14px;
+  }
+  .main-content {
+    min-height: 150vh;
+  }
+  .minecraft-news-title {
+    font-size: 36px;
+  }
+  .community-creations h2 {
+    font-size: 28px;
+  }
+  .creations-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .creation-card {
+    max-width: 90%;
+    padding: 10px;
+  }
+  .carousel-description h2 {
+    font-size: 36px;
+  }
+  .carr-slide a {
+    font-size: 12px;
+  }
+  .social-icon img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  body {
+    font-size: 12px;
+  }
+  .main-content {
+    min-height: 120vh;
+  }
+  .minecraft-news-title {
+    font-size: 28px;
+  }
+  .community-creations h2 {
+    font-size: 24px;
+  }
+  .creations-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .creation-card {
+    max-width: 100%;
+    padding: 8px;
+  }
+  .carousel-description h2 {
+    font-size: 28px;
+  }
+  .carr-slide a {
+    font-size: 11px;
+  }
+  .social-icon img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
   

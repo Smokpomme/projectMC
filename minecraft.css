@@ -1,4 +1,3 @@
-@import url('mcreponsive.css');
 body {
   margin: 0;
   font-family: "CUSTOM";
@@ -294,6 +293,102 @@ body {
   float: right;
 }
 
+/* Responsiveness */
+@media (min-width: 1281px) { /* Desktop */
+  .main-content {
+    min-height: 200vh;
+  }
+  .carousel-container {
+    height: 130vh;
+  }
+  .main-image {
+    height: 115vh;
+    margin-bottom: 125px;
+  }
+  .description-container {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 1280px) and (min-width: 769px) { /* Laptop */
+  .main-content {
+    min-height: 180vh;
+  }
+  .carousel-container {
+    height: 100vh;
+  }
+  .main-image {
+    height: 100vh;
+    margin-bottom: 100px;
+  }
+  .description-container {
+    font-size: 1rem;
+  }
+  .thumbnails {
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 768px) and (min-width: 481px) { /* Tablet */
+  .main-content {
+    min-height: 150vh;
+  }
+  .carousel-container {
+    height: 90vh;
+  }
+  .main-image {
+    height: 90vh;
+    margin-bottom: 80px;
+  }
+  .description-container {
+    font-size: 0.9rem;
+  }
+  .thumbnail {
+    width: 80px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) { /* Mobile */
+  .main-content {
+    min-height: 130vh;
+  }
+  .carousel-container {
+    height: 70vh;
+  }
+  .main-image {
+    height: 70vh;
+    margin-bottom: 50px;
+  }
+  .description-container {
+    font-size: 0.8rem;
+    padding: 10px;
+    bottom: 10px;
+    left: 10px;
+  }
+  .thumbnails {
+    gap: 5px;
+    bottom: 5px;
+    right: 5px;
+  }
+  .thumbnail {
+    width: 60px;
+    height: 40px;
+  }
+  .community-creations h2 {
+    font-size: 24px;
+  }
+  .creation-card {
+    margin: 0 5px;
+  }
+  .collection-text h1 {
+    font-size: 1.5em;
+  }
+  .collection-text p {
+    font-size: 1em;
+  }
+}
 
 
 

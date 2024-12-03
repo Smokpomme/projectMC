@@ -175,34 +175,6 @@ body {
 
 
 
-
-/* Adaptation pour les petits écrans */
-@media (max-width: 768px) {
-  .button {
-    width: 3rem;
-    height: 3rem;
-  }
-
-  .img_li {
-    max-height: 50vh; /* Ajuster la hauteur de l'image pour les écrans mobiles */
-  }
-
-  .list {
-    gap: 30px; /* Réduire l'écart entre les images sur mobile */
-  }
-}
-
-/* Ajustement pour les grands écrans */
-@media (min-width: 1200px) {
-  .item {
-    width: 50%; /* Réduit la largeur pour les grands écrans */
-  }
-}
-
-
-
-
-
 /* Container Styles */
 .community-creations {
   background-color: #327734;
@@ -366,6 +338,164 @@ body {
 }
 
 
+/* Desktop - Large screens */
+@media screen and (max-width: 1600px) {
+  /* Ajustements spécifiques pour les grands écrans */
+  .minecraft-news-title {
+    font-size: 48px; /* Titre principal un peu plus grand pour des écrans larges */
+  }
+
+  .mc_p {
+    font-size: 16px; /* Ajuste la taille du texte pour une meilleure lisibilité */
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  .collection-container {
+    gap: 30px; /* Plus d'espace entre les sections */
+  }
+
+  .collection-text h1 {
+    font-size: 2.2em; /* Titre légèrement plus grand */
+  }
+
+  .creation-card {
+    max-width: 300px; /* Légèrement plus large pour les grands écrans */
+  }
+
+  .earth-icon img {
+    max-width: 60%; /* Légèrement plus grand pour un affichage optimisé */
+  }
+
+  .creations-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur desktop */
+  }
+}
+
+/* Laptop - Medium Screens */
+@media screen and (max-width: 1280px) {
+  .minecraft-news-title {
+    font-size: 42px; /* Un peu plus petit pour les laptops */
+  }
+
+  .mc_p {
+    font-size: 15px;
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  .collection-container {
+    gap: 25px;
+  }
+
+  .collection-text h1 {
+    font-size: 2em; /* Réduction de la taille pour les écrans moyens */
+  }
+
+  .list-wrapper {
+    max-width: 80%; /* Réduit la largeur du carrousel */
+  }
+
+  .creations-grid {
+    grid-template-columns: repeat(3, 1fr); /* Toujours 3 colonnes */
+  }
+
+  .earth-icon img {
+    max-width: 50%; /* Réduit la taille de l'icône */
+  }
+}
+
+/* Tablet - Portrait Orientation */
+@media screen and (max-width: 768px) {
+  .minecraft-news-title {
+    font-size: 36px; /* Réduit la taille du titre */
+  }
+
+  .mc_p {
+    font-size: 14px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+
+  .collection-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .collection-text {
+    max-width: 90%;
+  }
+
+  .list-wrapper {
+    max-width: 100%;
+  }
+
+  .creations-grid {
+    grid-template-columns: 1fr 1fr; /* 2 colonnes pour les tablettes */
+    gap: 15px;
+  }
+
+  .creation-card {
+    max-width: 90%;
+  }
+
+  .earth-icon img {
+    max-width: 70%; /* Ajuste l'image pour les tablettes */
+  }
+}
+
+/* Mobile - Small screens */
+@media screen and (max-width: 480px) {
+  body {
+    font-size: 14px; /* Réduit la taille globale de la police */
+  }
+
+  .title-container {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+
+  .minecraft-news-title {
+    font-size: 28px; /* Titre plus petit pour les petits écrans */
+  }
+
+  .mc_p {
+    font-size: 12px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .collection-container {
+    gap: 10px; /* Réduit l'espacement entre les sections */
+  }
+
+  .collection-text h1 {
+    font-size: 1.5em;
+  }
+
+  .collection-text p {
+    font-size: 0.9em;
+  }
+
+  .list-wrapper {
+    gap: 5px;
+  }
+
+  .creations-grid {
+    grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+    gap: 10px;
+  }
+
+  .creation-card {
+    height: auto;
+    max-width: 100%;
+  }
+
+  .earth-icon img {
+    max-width: 80%; /* Ajuste l'image pour les mobiles */
+  }
+}
 
 
 
