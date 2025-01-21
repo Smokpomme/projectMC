@@ -18,7 +18,6 @@ body {
 .main-content {
   flex-grow: 1;
   background-color: #313131;
-  background-size: cover;
   background-repeat: no-repeat;
   min-height: 200vh;
   
@@ -28,14 +27,12 @@ body {
 
 /* Conteneur du carrousel */
 .carousel-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 130vh;
     position: relative;
     background-color: #222;
-    padding: 0px;
     box-sizing: border-box;
 }
 
@@ -53,7 +50,6 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover; /* Couvre tout le conteneur en conservant les proportions */
-    border-radius: 10px;
 }
 
 /* Description */
@@ -195,6 +191,8 @@ body {
 .creation-info h3 {
   font-size: 18px;
   margin: 5px 0 0 0;
+  text-decoration: underline;
+  
 }
 
 
@@ -389,10 +387,5 @@ body {
     font-size: 1em;
   }
 }
-
-
-
-
-
 
 

@@ -361,11 +361,13 @@ body {
 
 /* Contenu du Popup */
 .popup-content {
+  position: relative; /* Important : nécessaire pour positionner le bouton dans ce conteneur */
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   max-width: 500px;
   text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour un meilleur effet visuel */
 }
 
 /* Bouton de fermeture */
@@ -373,12 +375,13 @@ body {
   font-size: 30px;
   color: #000;
   cursor: pointer;
-  position: absolute;
+  position: absolute; /* Se positionne par rapport au parent ayant "position: relative" */
   top: 10px;
   right: 10px;
+  z-index: 10; /* Toujours au-dessus du contenu */
 }
 
-/* Ajoutez un effet au survol du bouton de fermeture */
+/* Effet au survol du bouton de fermeture */
 .popup-close:hover {
   color: #f00;
 }

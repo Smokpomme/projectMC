@@ -1,0 +1,251 @@
+/* css du chatbot */
+/* Style du bouton flottant */
+.chatbot-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    height: 90px;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 1000;
+  
+    /* Bordure animée par défaut marron */
+    background: conic-gradient(#8B4513, #A0522D, #8B4513, #A0522D); /* Dégradé marron */
+    background-size: 200% 200%;
+    animation: border-rotation 3s linear infinite;
+    padding: 5px; /* Espacement pour l'effet visuel de la bordure */
+    transition: background 0.3s ease; /* Transition pour le changement de couleur */
+  
+  }
+  
+  .chatbot-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #fff; /* Couleur de fond pour l'image */
+  }
+  /* Effet au survol */
+  .chatbot-icon:hover {
+    background: conic-gradient(#32CD32, #3CB371, #32CD32, #3CB371); /* Dégradé vert au survol */
+    transform: scale(1.025);
+    
+  }
+  
+  
+  
+  /* Chatbot Window */
+  .chatbot-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    height: 600px;
+    background-color: #292929;
+    border-radius: 0px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Cachée par défaut */
+    flex-direction: column;
+    z-index: 1001; /* Au-dessus de l'icône */
+    overflow: hidden;
+  }
+  
+  .chatbot-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .chatbot-header img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  
+  .chatbot-body {
+    flex: 1;
+    padding: 10px;
+    overflow-y: auto;
+    color: #ffffff;
+  }
+  
+  /* Messages dans la zone de discussion */
+  .chatbot-message {
+    max-width: 80%;
+    margin: 10px 0;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  /* Message reçu (chatbot) */
+  .chatbot-message.received {
+    background-color: #f1f1f1;
+    color: #333;
+    align-self: flex-start;
+    margin-left: 10px;
+  }
+  
+  /* Message envoyé (utilisateur) */
+  .chatbot-message.sent {
+    background-color: #4CAF50;
+    color: white;
+    align-self: flex-end;
+    margin-right: 10px;
+  }
+  
+  
+  
+  
+  .toggle-choices {
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    padding: 3px;
+    font-weight: bold;
+    border-top: 1px solid #ccc;
+  }
+  
+  .chatbot-choices {
+    display: none; /* Masqué par défaut */
+    background-color: #f1f1f1;
+    padding: 4px;
+    text-align: center;
+    display: flex; /* Active le flexbox */
+    justify-content: center; /* Centre les boutons horizontalement */
+    gap: 10px; /* Espacement uniforme entre les boutons */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+  }
+  
+  .chatbot-choices button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 250px; /* Définit une largeur fixe pour tous les boutons */
+    height: 40px; /* Définit une hauteur fixe pour uniformiser */
+    margin: 5px; /* Espacement autour des boutons */
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "CUSTOM";
+    text-align: center; /* Centrer le texte */
+  }
+  
+  .chatbot-choices button:hover {
+    background-color: #306e32;
+  }
+  
+  
+  
+  .chatbot-footer {
+    padding: 10px;
+    display: flex;
+    gap: 5px;
+    
+  }
+  
+  .chatbot-footer input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .chatbot-footer button {
+    padding: 8px 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chatbot-footer button:hover {
+    background-color: #3CB371;
+  }
+  
+  /* Bouton de fermeture */
+  .close-btn {
+    font-size: 20px;
+    cursor: pointer;
+    color: white;
+  }
+  
+  .close-btn:hover {
+    color: #f00;
+  }
+  
+  /*CSS des crafts*/
+  
+  /* Conteneur principal des crafts */
+  .craft-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacement entre les crafts */
+    margin: 20px 0;
+  }
+  
+  /* Bouton dans chaque craft */
+  .craft-item button {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+    width: 100%;
+    padding: 10px;
+    font-family: 'CUSTOM';
+    gap: 10px; /* Espacement entre les colonnes */
+    transition: transform 0.2s;
+  }
+  
+  .craft-item button:hover {
+    transform: scale(1.05); /* Animation au survol */
+  }
+  
+  /* Colonne de l'image */
+  .craft-item button .image-column {
+    flex: 0 0 50%; /* Largeur fixe pour l'image */
+    height: 50%; /* Hauteur fixe pour l'image */
+  }
+  
+  .craft-item button .image-column img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Colonne du texte */
+  .craft-item button .text-column {
+    flex: 1; /* Prend tout l'espace restant */
+    display: flex;
+    flex-direction: column; /* Aligne le texte en colonne */
+    justify-content: center; /* Centre verticalement */
+    overflow: hidden; /* Empêche le débordement */
+  }
+  
+  .craft-item button .text-column span {
+    white-space: normal; /* Autorise les retours à la ligne */
+    word-wrap: break-word; /* Divise les mots longs */
+    line-height: 1.2; /* Réduit l'espacement vertical */
+  }
+  
+  
+  

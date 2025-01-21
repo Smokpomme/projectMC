@@ -8,9 +8,17 @@
     <script>
       // Inclure le header
       document.addEventListener('DOMContentLoaded', () => {
-          fetch('../header/header.html')
-              .then(response => response.text())
-              .then(data => document.getElementById('header').innerHTML = data);
+        fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
 
           fetch('../social/social.html')
               .then(response => response.text())
@@ -23,6 +31,31 @@
     </script>
 </head>
 <body>
+
+  <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+    <img src="/projectMC/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+</div>
+
+<div class="chatbot-window" id="chatbotWindow" style="display: none;">
+    <div class="chatbot-header">
+        <img src="/projectMC/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+        <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+    </div>
+    <div class="chatbot-body" id="chatbotBody">
+        <!-- Message par défaut -->
+        <div class="chatbot-message received">
+            <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+        </div>
+    </div>
+    <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+    <div class="chatbot-choices" id="chatbotChoices"></div>
+        <div class="chatbot-footer">
+        <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+        <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+        </div>
+    </div>
+    <script src="/projectMC/Projet/src/chatbot/chatbot.js"></script>
+    <link rel="stylesheet" href="/projectMC/Projet/src/chatbot/chatbot.css">
 
     <main class="main-content">
     <div id="header"></div>

@@ -10,7 +10,15 @@
         document.addEventListener('DOMContentLoaded', () => {
             fetch('../header/header.html')
                 .then(response => response.text())
-                .then(data => document.getElementById('header').innerHTML = data);
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
 
             fetch('../social/social.html')
                 .then(response => response.text())
@@ -29,6 +37,31 @@
         
     </div>
 
+    <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+        <img src="/projectMC/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+    </div>
+
+    <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+        <div class="chatbot-header">
+            <img src="/projectMC/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <!-- Message par défaut -->
+            <div class="chatbot-message received">
+                <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+            </div>
+        </div>
+        <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+        <div class="chatbot-choices" id="chatbotChoices"></div>
+            <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+            <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+            </div>
+        </div>
+        <script src="/projectMC/Projet/src/chatbot/chatbot.js"></script>
+        <link rel="stylesheet" href="/projectMC/Projet/src/chatbot/chatbot.css">
+
         
     <div class="title-container">
         <h1 class="minecraft-news-title">Construction d’un monde meilleur</h1>
@@ -40,62 +73,7 @@
         
 
    
-            <div class="collection-container">
-                  <div class="collection-text">
-                    <h1>BUILD VEDETTE</h1>
-                    <p class="explanatory-text">
-                        Découvrez les créations incroyables de notre communauté. Chaque build est une œuvre unique, pleine de créativité et d'ingéniosité. Plongez dans ces mondes fantastiques ! 
-                        <br><br>
-                        Chaque semaine, envoyez-nous vos créations, qu'elles soient gigantesques ou petites, détaillées ou non, vertes, rouges ou bleues ! Tentez de figurer chaque semaine sur notre page de builds hebdomadaire et gagnez en visibilité. Que vous soyez un nouveau builder ou un vétéran, c'est votre chance de briller !
-                        <br><br>
-                        Que le meilleur gagne !<br>
-                        
-                        <a href="/Projet/src/communaute/commu.html#share">Envoyez nous vos build !</a>
-                    </p>
-                  </div>
-          <!-- Carrousel -->
-          <div class="list-wrapper">
-            <ul class="list">
-              <li class="item">
-                <div class="content">
-                  <img src="pic/1.jpg" alt="" class="img_li">
-                  <div class="description" id="lune">
-                    <h1>Maison dans une Lune</h1>
-                    <p><i>"J'ai voulu créer quelque chose d'original, car j'en avais marre de construire des maisons au sol tout le temmps. Le seul problème, c'est : comment monter dans ma maison ?"</i><strong>by BuildWizard</strong></p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="content">
-                  <img src="pic/2.jpg" alt="" class="img_li">
-                  <div class="description" id="portail">
-                    <h1>Portail remonter de l'eau</h1>
-                    <p><i>"Un étrange portail a été remonté de l'eau hier dans l'après-midi. Les villageois et moi ne savons pas quoi faire, nous entendons des bruits très étranges émanant de ce portail."</i><strong>by EnderExplorer</strong></p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="content">
-                  <img src="pic/3.jpg" alt="" class="img_li">
-                  <div class="description" id="temple">
-                    <h1>Temple dans la Jungle</h1>
-                    <p><i>"J'ai voulu rendre hommage aux villageois qui se sont perdus dans la jungle, alors j'ai construit un temple en leur honneur."</i><strong>by CraftMaster</strong></p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="content">
-                  <img src="pic/4.jpg" class="img_li">
-                  <div class="description" id="arbre">
-                    <h1>Maison sur un Arbre</h1>
-                    <p><i>"J'aime beaucoup les elfes, donc j'ai décidé de vivre comme eux, c'est-à-dire dans un arbre !"</i><strong>by CreeperHunter</strong></p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-          </div>
-        </div>
+            
       
 
         
@@ -247,6 +225,63 @@
               <!-- Ajoute plus d'images si besoin -->
           </div>
       </section>
+
+      <div class="collection-container">
+        <div class="collection-text">
+          <h1>BUILD VEDETTE</h1>
+          <p class="explanatory-text">
+              Découvrez les créations incroyables de notre communauté. Chaque build est une œuvre unique, pleine de créativité et d'ingéniosité. Plongez dans ces mondes fantastiques ! 
+              <br><br>
+              Chaque semaine, envoyez-nous vos créations, qu'elles soient gigantesques ou petites, détaillées ou non, vertes, rouges ou bleues ! Tentez de figurer chaque semaine sur notre page de builds hebdomadaire et gagnez en visibilité. Que vous soyez un nouveau builder ou un vétéran, c'est votre chance de briller !
+              <br><br>
+              Que le meilleur gagne !<br>
+              
+              <a href="/projectMC/Projet/src/communaute/commu.html#share">Envoyez nous vos build !</a>
+          </p>
+        </div>
+<!-- Carrousel -->
+<div class="list-wrapper">
+  <ul class="list">
+    <li class="item">
+      <div class="content">
+        <img src="pic/1.jpg" alt="" class="img_li">
+        <div class="description" id="lune">
+          <h1>Maison dans une Lune</h1>
+          <p><i>"J'ai voulu créer quelque chose d'original, car j'en avais marre de construire des maisons au sol tout le temmps. Le seul problème, c'est : comment monter dans ma maison ?"</i><strong>by BuildWizard</strong></p>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="content">
+        <img src="pic/2.jpg" alt="" class="img_li">
+        <div class="description" id="portail">
+          <h1>Portail remonter de l'eau</h1>
+          <p><i>"Un étrange portail a été remonté de l'eau hier dans l'après-midi. Les villageois et moi ne savons pas quoi faire, nous entendons des bruits très étranges émanant de ce portail."</i><strong>by EnderExplorer</strong></p>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="content">
+        <img src="pic/3.jpg" alt="" class="img_li">
+        <div class="description" id="temple">
+          <h1>Temple dans la Jungle</h1>
+          <p><i>"J'ai voulu rendre hommage aux villageois qui se sont perdus dans la jungle, alors j'ai construit un temple en leur honneur."</i><strong>by CraftMaster</strong></p>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="content">
+        <img src="pic/4.jpg" class="img_li">
+        <div class="description" id="arbre">
+          <h1>Maison sur un Arbre</h1>
+          <p><i>"J'aime beaucoup les elfes, donc j'ai décidé de vivre comme eux, c'est-à-dire dans un arbre !"</i><strong>by CreeperHunter</strong></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>
+</div>
 
 
 
