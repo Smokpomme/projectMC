@@ -6,6 +6,7 @@ body {
     overflow-x: hidden;
   }
   
+  /* font */
   @font-face {
     font-family: "CUSTOM";
     src: url("../../FONT/MIN.woff2");
@@ -20,18 +21,16 @@ body {
     background-color: #313131;
     background-size: cover;
     background-repeat: no-repeat;
-
-  
-    }
+  }
   
   
   
-  /* Conteneur principal de la FAQ */
+/* FAQ */
 .faq-container {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centre le contenu horizontalement */
-    justify-content: center; /* Centre le contenu verticalement */
+    align-items: center; 
+    justify-content: center; 
     text-align: center;
     padding: 50px;
     background-color: white;
@@ -43,7 +42,6 @@ body {
     margin-top: 40px;
 }
 
-  /* Titre de la FAQ */
   .faq-title {
     font-family: 'CUSTOM';
     font-size: 38px;
@@ -65,8 +63,6 @@ body {
     width: 100%;
   }
 
-
-  
   /* Style pour chaque élément FAQ */
   .faq-item h2 {
     font-size: 19px;
@@ -81,25 +77,22 @@ body {
     font-size: 14px;
     color: black;
     line-height: 1.5;
-    margin: 0 auto; /* Centrer les paragraphes */
+    margin: 0 auto; 
     text-align: left;
     max-width: 300px;
   }
   
   .faq-item a {
     color: #458f31;
-    text-decoration: underline; /* Ajoute le soulignement par défaut */
+    text-decoration: underline; 
     transition: text-decoration 0.3s ease;
   }
   
   .faq-item a:hover {
-    text-decoration: none; /* Retire le soulignement au survol */
+    text-decoration: none; 
   }
   
-
-
-
-
+  /* section travail */
 .jobs-section {
     background-color: #ffffff;
     padding: 40px 20px;
@@ -151,8 +144,8 @@ body {
 }
 
 
-/* Responsiveness */
-@media (min-width: 1281px) { /* Desktop */
+/* Responsive */
+@media (min-width: 1281px) { /* pc */
   .faq-container {
     padding: 50px;
   }
@@ -179,7 +172,7 @@ body {
   }
 }
 
-@media (max-width: 1280px) and (min-width: 769px) { /* Laptop */
+@media (max-width: 1280px) and (min-width: 769px) { /* pc portable */
   .faq-container {
     padding: 40px;
   }
@@ -205,7 +198,7 @@ body {
   }
 }
 
-@media (max-width: 768px) and (min-width: 481px) { /* Tablet */
+@media (max-width: 768px) and (min-width: 481px) { /* Tablette */
   .faq-container {
     padding: 30px;
   }

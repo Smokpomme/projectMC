@@ -1,7 +1,7 @@
 .social-container {
-    background-color: #000000; /* Fond noir */
-    padding: 20px 0; /* Espacement interne */
-    text-align: center; /* Centrer le texte */
+    background-color: #000000; 
+    padding: 20px 0; 
+    text-align: center; 
   }
   
   .social-title {
@@ -15,83 +15,83 @@
   .social-icons {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espacement entre les icônes */
+    gap: 15px; 
   }
   
   .social-icon img {
-    width: 40px; /* Taille des icônes */
+    width: 40px; 
     height: 40px;
-    border-radius: 50%; /* Pour rendre les icônes circulaires */
+    border-radius: 50%; 
     padding: 10px;
     transition: transform 0.3s ease;
   }
   
   .social-icon img:hover {
-    transform: scale(1.1); /* Agrandissement au survol */
+    transform: scale(1.1); 
   }
 
-/* Desktop: 1600x992px scaled down to scale(0.3181) */
+/* pc */
 @media (min-width: 1281px) {
   .social-title {
-    font-size: 20px; /* Augmentation de la taille de la police */
+    font-size: 20px; 
   }
 
   .social-icons {
-    gap: 20px; /* Plus d'espacement entre les icônes */
+    gap: 20px; 
   }
 
   .social-icon img {
-    width: 45px; /* Agrandissement des icônes */
+    width: 45px; 
     height: 45px;
   }
 }
 
-/* Laptop: 1280x802px scaled down to scale(0.277) */
+/* pc portable */
 @media (max-width: 1280px) and (min-width: 769px) {
   .social-title {
-    font-size: 18px; /* Taille de police standard */
+    font-size: 18px;
   }
 
   .social-icons {
-    gap: 18px; /* Espacement réduit */
+    gap: 18px; 
   }
 
   .social-icon img {
-    width: 42px; /* Taille des icônes ajustée */
+    width: 42px; 
     height: 42px;
   }
 }
 
-/* Tablet: 768x1024px scaled down to scale(0.219) */
+/* Tablette */
 @media (max-width: 768px) and (min-width: 481px) {
   .social-title {
-    font-size: 16px; /* Taille de police plus petite */
+    font-size: 16px; 
   }
 
   .social-icons {
-    gap: 12px; /* Espacement encore plus petit */
+    gap: 12px; 
   }
 
   .social-icon img {
-    width: 38px; /* Taille des icônes réduite */
+    width: 38px;
     height: 38px;
   }
 }
 
-/* Mobile: 320x480px scaled down to scale(0.219) */
+/* Mobile */
 @media (max-width: 480px) {
   .social-title {
-    font-size: 14px; /* Taille de police la plus petite */
-    margin-bottom: 10px; /* Réduire l'espace sous le titre */
+    font-size: 14px; 
+    margin-bottom: 10px; 
   }
 
   .social-icons {
-    gap: 10px; /* Espacement minimal entre les icônes */
+    gap: 10px; 
   }
 
   .social-icon img {
-    width: 35px; /* Icônes plus petites */
+    width: 35px; 
     height: 35px;
-    padding: 8px; /* Moins de padding */
+    padding: 8px; 
   }
 }

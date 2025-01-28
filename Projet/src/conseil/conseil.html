@@ -6,11 +6,19 @@
     <title>commu</title>
     <link rel="stylesheet" href="conseil.css">
     <script>
-        // Inclure le header
+        // Inclure fetch
         document.addEventListener('DOMContentLoaded', () => {
             fetch('../header/header.html')
                 .then(response => response.text())
-                .then(data => document.getElementById('header').innerHTML = data);
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
 
             fetch('../social/social.html')
                 .then(response => response.text())
@@ -25,60 +33,40 @@
 <body>
 
     <main class="main-content">
-    <div id="header">
+    <!-- appel header -->
+    <div id="header"></div>
 
+    <!-- appel chatbot -->
+    <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+        <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
     </div>
 
-        
-    <div class="title-container">
-        <h1 class="minecraft-news-title">COMMENT BIEN DEBUTER SUR MINECRAFT</h1>
-    </div>
-
-    
-    
-        
-
-
-    <section class="community-creations">
-        <h2>Fonctionnement</h2>
-        <div class="creations-grid">
-            <div class="creation-card">
-                <div class="image-container">
-                    <img src="pic/p1.avif" alt="" class="creation-image">
-                </div>
-                <div class="creation-info">
-                    <h1>Prise en main</h1>
-                    <h3>Tout ce que vous devez savoir avant de commencer à jouer à Minecraft.</h3>
-                    <a href="#carrousel-1">COMMENCER MAINTENANT</a>
-                </div>
-            </div>
-            <div class="creation-card">
-                <div class="image-container">
-                    <img src="pic/p22.jpg" alt="" class="creation-image">
-                </div>
-                <div class="creation-info">
-                    <h1>Pour les débutants</h1>
-                    <h3>Des supers conseils et astuces pour survivre et créer des objets dans la Surface et au-delà.</h3>
-                    <a href="#carrousel-2">EXPLORER LES CONSEILS</a>
-                </div>
-            </div>
-            <div class="creation-card">
-                <div class="image-container">
-                    <img src="pic/p33.jpg" alt="" class="creation-image">
-                </div>
-                <div class="creation-info">
-                    <h1>Améliore ton expérience !</h1>
-                    <h3>Pour les joueurs qui souhaitent vivre une expérience améliorée.</h3>
-                    <a href="#carrousel-3">EN SAVOIR PLUS</a>
-                </div>
-            </div>
-            <!-- Ajoutez autant de cartes que nécessaire -->
+    <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+        <div class="chatbot-header">
+            <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
         </div>
-    </section>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message received">
+                <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+            </div>
+        </div>
+        <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+        <div class="chatbot-choices" id="chatbotChoices"></div>
+            <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+            <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+            </div>
+        </div>
+        <script src="/Projet/src/chatbot/chatbot.js"></script>
+        <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
 
-     
-
-    <!-- 1er Carrousel de vidéos -->
+        
+        <div class="title-container">
+            <h1 class="minecraft-news-title">COMMENT BIEN DEBUTER SUR MINECRAFT</h1>
+        </div>
+    
+<!-- carrousel -->
 <div id="carrousel-1" class="collection-container">
   <div class="collection-text">
       <h1>Prise en main de Minecraft</h1>
@@ -370,15 +358,14 @@
   </div>
 </div>
 
+    <!-- appel social -->
     <div id="social"></div>
-
-
     </main>
 
+    <!-- appel footer -->
     <div id="footer"></div>
 
-
-
+    <!-- appel js -->
     <script src="conseil.js"></script>
 </body>
 </html>

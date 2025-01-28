@@ -5,7 +5,8 @@ body {
     flex-direction: column;
     overflow-x: hidden;
   }
-  
+
+  /* font */
   @font-face {
     font-family: "CUSTOM";
     src: url("../../FONT/MIN.woff2");
@@ -21,131 +22,39 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 250vh;
-  
     }
   
   
-  
+  /* title */
   .title-container {
     text-align: center;
     margin: 0; 
-    background-color: #272727 ;
+    background-color: #1d1d1d;
     padding-top: 90px;
     padding-bottom: 30px;
     position: relative;
-    
-  
   }
   
   .minecraft-news-title {
     font-family: "CUSTOM"; 
     font-size: 48px; 
-    color: white; 
-    text-align: center; /* Centre le texte pour un meilleur aspect sur mobile */
+    color: rgb(235, 235, 235); 
+    text-align: center; 
   }
   
-
-  
-  
-  
-  .community-creations {
-    padding: 20px;
-    text-align: center;
-    background-color: #e2e2e2;
-}
-  
-.community-creations h2 {
-    font-family: "CUSTOM";
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: white;
-}
-  
-.creations-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0px; /* Réduit l'espacement entre les éléments de la grille */
-    padding: 0px; /* Réduit le padding autour de la grille */
-}
-  
-.creation-card {
-    overflow: hidden;
-    transition: none;
-    background-color: #e2e2e2;
-    border: 1px solid #ddd;
-    padding: 15px;
-    text-align: center;
-    max-width: 300px; /* Limite la largeur pour un alignement plus serré */
-    margin: 0 auto; /* Centre les cartes dans la grille */
-}
-
-.image-container {
-    width: 100%;
-    margin: 0 auto;
-    padding-top: 100%;
-    position: relative;
-    overflow: hidden;
-}
-  
-.creation-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-}
-  
-.creation-info {
-    padding: 10px;
-    text-align: center;
-    color: rgb(0, 0, 0);
-}
-  
-.creation-info .category {
-    display: inline-block;
-    background-color: #d6d6d6;
-    color: black;
-    padding: 2px 5px;
-    font-size: 20px;
-    font-weight: bold;
-    border: 1px solid black;
-    border-radius: 3px;
-    margin-bottom: 5px;
-}
-  
-.creation-info h3 {
-    font-family: 'NOTO';
-    font-size: 13px;
-    color: #353535;
-}
-.creation-info a {
-    font-family: 'NOTO';
-    font-size: 14px;
-    color: #000000;
-}
-.creation-info a:hover {
-text-decoration: none;
-
-}
-
-
-  
-  
-
-/* Conteneur principal */
-#carrousel-1 {
+  /* Conteneur principal */
+  #carrousel-1 {
     background-color: rgb(71, 153, 50); 
-}
-#carrousel-2 {
-  background-color: rgb(124, 65, 16); 
-}
-#carrousel-3 {
-  background-color: rgb(0, 89, 223); 
-}
+  }
+  #carrousel-2 {
+    background-color: rgb(124, 65, 16); 
+  }
+  #carrousel-3 {
+    background-color: rgb(0, 89, 223); 
+  }
 
-.collection-container {
+/* collection container */
+  .collection-container {
     display: grid;
     gap: 20px;
     padding: 10px 20px;
@@ -153,10 +62,10 @@ text-decoration: none;
     padding-bottom: 30px;
 
   }
-.collection-text{
+  .collection-text{
     text-align: center;
     color: white;
-}
+  }
   
   /* Carrousel */
   .list-wrapper {
@@ -176,7 +85,7 @@ text-decoration: none;
   }
   
   .item {
-    flex: 0 0 33.33%; /* Trois items visibles à la fois */
+    flex: 0 0 33.33%; 
     box-sizing: border-box;
     padding: 10px;
     transition: transform 0.5s ease-in-out;
@@ -221,7 +130,7 @@ text-decoration: none;
     width: 4rem;
     height: 4rem;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.0); /* Fond semi-transparent pour ne pas masquer trop l'image */
+    background-color: rgba(0, 0, 0, 0.0); 
     color: white;
     border: none;
     cursor: pointer;
@@ -229,21 +138,21 @@ text-decoration: none;
     display: flex; 
     align-items: center; 
     justify-content: center;
-    transition: background-color 0.3s ease; /* Transition fluide sur le hover */
+    transition: background-color 0.3s ease; 
   }
   
   .button--previous {
-    left: 1rem; /* Placé à gauche, légèrement à l'intérieur du carrousel */
+    left: 1rem; 
   }
   
   /* Bouton suivant */
   .button--next {
-    right: 1rem; /* Placé à droite, légèrement à l'intérieur du carrousel */
+    right: 1rem; 
   }
   
-  /* Effet au survol (hover) */
+  /* Effet au survol */
   .button:hover::before {
-    border-color: #4CAF50; /* Couleur de la flèche lors du survol */
+    border-color: #4CAF50; 
   }
   
   /* Flèche à l'intérieur des boutons */
@@ -258,12 +167,12 @@ text-decoration: none;
   
   /* Flèche directionnelle pour le bouton précédent */
   .button--previous::before {
-    transform: rotate(135deg); /* Flèche pointant vers la gauche */
+    transform: rotate(135deg); 
   }
   
   /* Flèche directionnelle pour le bouton suivant */
   .button--next::before {
-    transform: rotate(-45deg); /* Flèche pointant vers la droite */
+    transform: rotate(-45deg); 
   }
   
   /* Masquer les flèches quand elles sont désactivées */
@@ -271,11 +180,7 @@ text-decoration: none;
     display: none;
   }
 
-
-
-
-
-
+  /* carousel */
   .carousel-container { 
     display: flex;
     align-items: flex-start; 
@@ -287,9 +192,9 @@ text-decoration: none;
 }
 
 .carousel-description {
-    width: 20%; /* Garde la largeur que tu souhaites */
+    width: 20%; 
     margin-right: 10px; 
-    padding-left: 200px; /* Si nécessaire, ajustez ou retirez cela */
+    padding-left: 200px; 
 }
 
 #carousel-1-images .carousel-description h2{
@@ -327,7 +232,7 @@ text-decoration: none;
 }
 
 .carousel-images {
-    width: 50%; /* Ajuste pour que le conteneur soit suffisamment large pour 4 slides */
+    width: 50%; 
     overflow: hidden;
     position: relative;
 }
@@ -338,7 +243,7 @@ text-decoration: none;
 }
 
 .carr-slide {
-    min-width: 25%; /* 100% / 4 slides = 25% pour chaque slide */
+    min-width: 25%; 
     box-sizing: border-box;
     text-align: center;
     margin: 0;
@@ -361,47 +266,10 @@ text-decoration: none;
 }
 
 
-
-
   
   
-  
-  
-  .social-container {
-    background-color: #000000; /* Fond noir */
-    padding: 20px 0; /* Espacement interne */
-    text-align: center; /* Centrer le texte */
-  }
-  
-  .social-title {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
-  }
-  
-  .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Espacement entre les icônes */
-  }
-  
-  .social-icon img {
-    width: 40px; /* Taille des icônes */
-    height: 40px;
-    border-radius: 50%; /* Pour rendre les icônes circulaires */
-    padding: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .social-icon img:hover {
-    transform: scale(1.1); /* Agrandissement au survol */
-  }
-  
-  
-  /* Responsiveness */
-@media (min-width: 1281px) { /* Desktop */
+  /* Responsive */
+@media (min-width: 1281px) { /* pc */
   body {
     font-size: 16px;
   }
@@ -434,7 +302,7 @@ text-decoration: none;
   }
 }
 
-@media (max-width: 1280px) and (min-width: 769px) { /* Laptop */
+@media (max-width: 1280px) and (min-width: 769px) { /*pc portable */
   body {
     font-size: 15px;
   }
@@ -467,7 +335,7 @@ text-decoration: none;
   }
 }
 
-@media (max-width: 768px) and (min-width: 481px) { /* Tablet */
+@media (max-width: 768px) and (min-width: 481px) { /* Tablette */
   body {
     font-size: 14px;
   }

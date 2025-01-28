@@ -5,16 +5,16 @@ function selectVersion(version) {
     box.classList.remove('selected');
   });
 
-  // Ajouter la classe "selected" à la version sélectionnée
+  // Add la classe "selected" à la version sélectionnée
   const selectedBox = document.querySelector(`.version-box[onclick="selectVersion('${version}')"]`);
   selectedBox.classList.add('selected');
 
-  // Changer l'image principale en fonction de la version
+  // Changer image principale en fonction de la version
   const mainImage = document.querySelector('.main-image');
   if (version === 'deluxe') {
-    mainImage.src = 'PIC/deluxe1.jpg'; // Remplace par le chemin de l'image Deluxe
+    mainImage.src = 'PIC/deluxe1.jpg'; // Remplace par le chemin image Deluxe
   } else if (version === 'standard') {
-    mainImage.src = 'PIC/standars1.jpg'; // Remplace par le chemin de l'image Standard
+    mainImage.src = 'PIC/standars1.jpg'; // Remplace par le chemin image Standard
   }
 
   // Changer la description en fonction de la version
@@ -50,11 +50,11 @@ function showSlide(index) {
   else if (index < 0) currentSlide = slides.length - 1;
   else currentSlide = index;
 
-  // Mise à jour de l'image principale et de la description
+  // Maj de l'image principale et de la description
   document.querySelector('.main-imageMC').src = slides[currentSlide].src;
   document.querySelector('.image-descriptionMC').textContent = slides[currentSlide].description;
 
-  // Mise à jour des miniatures actives
+  // Maj des miniatures actives
   const thumbnails = document.querySelectorAll('.thumbnail');
   thumbnails.forEach((thumb, i) => {
     thumb.classList.toggle('active', i === currentSlide);
@@ -72,7 +72,7 @@ function selectSlide(index) {
 // Afficher la première slide par défaut
 showSlide(currentSlide);
 
-// Assurer que le popup est caché à l'ouverture de la page
+//pop cacher au lancement de page
 window.onload = function() {
   document.getElementById('payPopup').style.display = 'none';
 };
@@ -84,7 +84,7 @@ const payPopupClose = document.getElementById('payPopupClose');
 
 // Afficher le popup uniquement lorsque le bouton "Payer" est cliqué
 payButton.addEventListener('click', function() {
-    payPopup.style.display = 'flex'; // Afficher le popup
+    payPopup.style.display = 'flex'; 
 });
 
 // Fermer le popup lorsque l'utilisateur clique sur la croix
@@ -95,6 +95,6 @@ payPopupClose.addEventListener('click', function() {
 // Fermer le popup si l'utilisateur clique en dehors du popup
 window.addEventListener('click', function(event) {
     if (event.target === payPopup) {
-        payPopup.style.display = 'none'; // Cacher le popup si on clique en dehors
+        payPopup.style.display = 'none'; 
     }
 });

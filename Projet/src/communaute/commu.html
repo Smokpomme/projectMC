@@ -6,11 +6,19 @@
     <title>commu</title>
     <link rel="stylesheet" href="commu.css">
     <script>
-        // Inclure le header
+        // Inclure fetch
         document.addEventListener('DOMContentLoaded', () => {
             fetch('../header/header.html')
                 .then(response => response.text())
-                .then(data => document.getElementById('header').innerHTML = data);
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
 
             fetch('../social/social.html')
                 .then(response => response.text())
@@ -25,11 +33,35 @@
 <body>
 
     <main class="main-content">
-    <div id="header">
-        
+    <!-- appel header -->
+    <div id="header"></div>
+
+    <!-- appel chatbot -->
+    <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+        <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
     </div>
 
-        
+    <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+        <div class="chatbot-header">
+            <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message received">
+                <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+            </div>
+        </div>
+        <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+        <div class="chatbot-choices" id="chatbotChoices"></div>
+            <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+            <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+            </div>
+        </div>
+        <script src="/Projet/src/chatbot/chatbot.js"></script>
+        <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
+
+    <!-- title -->
     <div class="title-container">
         <h1 class="minecraft-news-title">Construction d’un monde meilleur</h1>
         <p class="mc_p"><strong>Minecraft est bien plus qu’un simple jeu. C’est un moyen pour nous de créer un meilleur avenir pour tous.</strong></p>
@@ -37,79 +69,13 @@
         <p class="mc_p">Nos initiatives Construction d’un monde meilleur se présentent sous toutes les formes et tailles, et chacune d’entre elles réalise quelque chose d’unique et de précieux à sa manière. Au fil du temps, nous avons compris que Minecraft et sa formidable communauté réalisaient de grandes choses dans trois domaines particulièrement importants pour nous : <strong>l’éducation, l’équité, et la durabilité.</strong></p>
     </div>
 
-        
-
-   
-            <div class="collection-container">
-                  <div class="collection-text">
-                    <h1>BUILD VEDETTE</h1>
-                    <p class="explanatory-text">
-                        Découvrez les créations incroyables de notre communauté. Chaque build est une œuvre unique, pleine de créativité et d'ingéniosité. Plongez dans ces mondes fantastiques ! 
-                        <br><br>
-                        Chaque semaine, envoyez-nous vos créations, qu'elles soient gigantesques ou petites, détaillées ou non, vertes, rouges ou bleues ! Tentez de figurer chaque semaine sur notre page de builds hebdomadaire et gagnez en visibilité. Que vous soyez un nouveau builder ou un vétéran, c'est votre chance de briller !
-                        <br><br>
-                        Que le meilleur gagne !<br>
-                        
-                        <a href="/Projet/src/communaute/commu.html#share">Envoyez nous vos build !</a>
-                    </p>
-                  </div>
-          <!-- Carrousel -->
-          <div class="list-wrapper">
-            <ul class="list">
-              <li class="item">
-                <div class="content">
-                  <img src="pic/1.jpg" alt="" class="img_li">
-                  <div class="description" id="lune">
-                    <h1>Maison dans une Lune</h1>
-                    <p><i>"J'ai voulu créer quelque chose d'original, car j'en avais marre de construire des maisons au sol tout le temmps. Le seul problème, c'est : comment monter dans ma maison ?"</i><strong>by BuildWizard</strong></p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="content">
-                  <img src="pic/2.jpg" alt="" class="img_li">
-                  <div class="description" id="portail">
-                    <h1>Portail remonter de l'eau</h1>
-                    <p><i>"Un étrange portail a été remonté de l'eau hier dans l'après-midi. Les villageois et moi ne savons pas quoi faire, nous entendons des bruits très étranges émanant de ce portail."</i><strong>by EnderExplorer</strong></p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="content">
-                  <img src="pic/3.jpg" alt="" class="img_li">
-                  <div class="description" id="temple">
-                    <h1>Temple dans la Jungle</h1>
-                    <p><i>"J'ai voulu rendre hommage aux villageois qui se sont perdus dans la jungle, alors j'ai construit un temple en leur honneur."</i><strong>by CraftMaster</strong></p>
-                  </div>
-                </div>
-              </li>
-              <li class="item">
-                <div class="content">
-                  <img src="pic/4.jpg" class="img_li">
-                  <div class="description" id="arbre">
-                    <h1>Maison sur un Arbre</h1>
-                    <p><i>"J'aime beaucoup les elfes, donc j'ai décidé de vivre comme eux, c'est-à-dire dans un arbre !"</i><strong>by CreeperHunter</strong></p>
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-          </div>
-        </div>
-      
-
-        
-
-        
-
-
+        <!-- communauter -->
         <section class="community-creations">
           <h2 class="section-title">Vous êtes notre source d'inspiration</h2>
           <p class="section-description">
               Nous ne sommes pas les seuls à réaliser des choses extraordinaires. Des initiatives de construction d'un monde meilleur se multiplient dans le monde entier. Notre communauté est extraordinaire.
           </p>
           <div class="creations-grid">
-              <!-- Image 1 -->
               <div class="creation-card" onclick="toggleFlip(this)">
                   <div class="flip-card">
                       <div class="flip-card-front">
@@ -124,7 +90,6 @@
                   </div>
               </div>
               
-              <!-- Image 2 -->
               <div class="creation-card flipped" onclick="toggleFlip(this)">
                   <div class="flip-card">
                       <div class="flip-card-front">
@@ -139,7 +104,6 @@
                   </div>
               </div>
       
-              <!-- Image 3 -->
               <div class="creation-card" onclick="toggleFlip(this)">
                   <div class="flip-card">
                       <div class="flip-card-front">
@@ -154,7 +118,6 @@
                   </div>
               </div>
 
-              <!-- Image 4 -->
               <div class="creation-card" onclick="toggleFlip(this)">
                 <div class="flip-card">
                     <div class="flip-card-front">
@@ -169,7 +132,6 @@
                 </div>
             </div>
 
-            <!-- Image 5 -->
             <div class="creation-card" onclick="toggleFlip(this)">
               <div class="flip-card">
                   <div class="flip-card-front">
@@ -184,7 +146,6 @@
               </div>
           </div>
           
-          <!-- Image 6 -->
           <div class="creation-card flipped" onclick="toggleFlip(this)">
             <div class="flip-card">
                 <div class="flip-card-front">
@@ -199,7 +160,6 @@
             </div>
         </div>
 
-        <!-- Image 7 -->
         <div class="creation-card flipped" onclick="toggleFlip(this)">
           <div class="flip-card">
               <div class="flip-card-front">
@@ -214,7 +174,6 @@
           </div>
       </div>
 
-      <!-- Image 8 -->
       <div class="creation-card" onclick="toggleFlip(this)">
         <div class="flip-card">
             <div class="flip-card-front">
@@ -229,7 +188,6 @@
         </div>
     </div>
 
-    <!-- Image 9 -->
     <div class="creation-card flipped" onclick="toggleFlip(this)">
       <div class="flip-card">
           <div class="flip-card-front">
@@ -244,12 +202,70 @@
       </div>
   </div>
 
-              <!-- Ajoute plus d'images si besoin -->
           </div>
       </section>
 
+      <!-- collection -->
+      <div class="collection-container">
+        <div class="collection-text">
+          <h1>BUILD VEDETTE</h1>
+          <p class="explanatory-text">
+              Découvrez les créations incroyables de notre communauté. Chaque build est une œuvre unique, pleine de créativité et d'ingéniosité. Plongez dans ces mondes fantastiques ! 
+              <br><br>
+              Chaque semaine, envoyez-nous vos créations, qu'elles soient gigantesques ou petites, détaillées ou non, vertes, rouges ou bleues ! Tentez de figurer chaque semaine sur notre page de builds hebdomadaire et gagnez en visibilité. Que vous soyez un nouveau builder ou un vétéran, c'est votre chance de briller !
+              <br><br>
+              Que le meilleur gagne !<br>
+              
+              <a href="/Projet/src/communaute/commu.html#share">Envoyez nous vos build !</a>
+          </p>
+        </div>
+
+<!-- Carrousel -->
+<div class="list-wrapper">
+  <ul class="list">
+    <li class="item">
+      <div class="content">
+        <img src="pic/1.jpg" alt="" class="img_li">
+        <div class="description" id="lune">
+          <h1>Maison dans une Lune</h1>
+          <p><i>"J'ai voulu créer quelque chose d'original, car j'en avais marre de construire des maisons au sol tout le temmps. Le seul problème, c'est : comment monter dans ma maison ?"</i><strong>by BuildWizard</strong></p>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="content">
+        <img src="pic/2.jpg" alt="" class="img_li">
+        <div class="description" id="portail">
+          <h1>Portail remonter de l'eau</h1>
+          <p><i>"Un étrange portail a été remonté de l'eau hier dans l'après-midi. Les villageois et moi ne savons pas quoi faire, nous entendons des bruits très étranges émanant de ce portail."</i><strong>by EnderExplorer</strong></p>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="content">
+        <img src="pic/3.jpg" alt="" class="img_li">
+        <div class="description" id="temple">
+          <h1>Temple dans la Jungle</h1>
+          <p><i>"J'ai voulu rendre hommage aux villageois qui se sont perdus dans la jungle, alors j'ai construit un temple en leur honneur."</i><strong>by CraftMaster</strong></p>
+        </div>
+      </div>
+    </li>
+    <li class="item">
+      <div class="content">
+        <img src="pic/4.jpg" class="img_li">
+        <div class="description" id="arbre">
+          <h1>Maison sur un Arbre</h1>
+          <p><i>"J'aime beaucoup les elfes, donc j'ai décidé de vivre comme eux, c'est-à-dire dans un arbre !"</i><strong>by CreeperHunter</strong></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+</div>
+</div>
 
 
+    <!-- partage -->
       <div class="share" id="share">
         <div class="earth-icon">
             <img src="pic/mc.avif" alt="">
@@ -266,23 +282,19 @@
    <!-- Popup -->
 <div id="popup" class="popup">
     <div class="popup-content">
-        <!-- Icône de fermeture -->
         <span class="popup-close" onclick="closePopup()">&times;</span>
         <h2>Page non disponible</h2>
         <p>La page de partage d'histoires n'est pas encore disponible. Revenez plus tard !</p>
     </div>
 </div>
-
+    <!-- appel social -->
       <div id="social"></div>
-
-
-
     </main>
 
+    <!-- appel footer -->
     <div id="footer"></div>
 
-
-
+    <!-- appel js -->
     <script src="commu.js"></script>
 </body>
 </html>

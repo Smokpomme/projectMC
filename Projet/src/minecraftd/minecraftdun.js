@@ -21,8 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
-
 // Attendre que le DOM soit complètement chargé
 document.addEventListener('DOMContentLoaded', function() {
     const thumbnails = document.querySelectorAll('.thumbnail');
@@ -30,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const leftArrow = document.querySelector('.left-arrow');
     const rightArrow = document.querySelector('.right-arrow');
 
-    let currentIndex = 0; // Index de la vignette actuelle
+    let currentIndex = 0; 
 
     function updateMainImage(index) {
         mainImage.src = thumbnails[index].src;
@@ -47,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         for (let i = 0; i < 5; i++) { // Affiche 5 vignettes
-            const indexToShow = (startIndex + i) % thumbnails.length; // Utilise le modulo pour boucler
+            const indexToShow = (startIndex + i) % thumbnails.length; 
             thumbnails[indexToShow].style.display = 'block'; // Affiche la vignette
         }
     }
@@ -82,14 +80,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-const list = document.querySelector(".list");
-
-  // We want to know the width of one of the items. We'll use this to decide how many pixels we want our carousel to scroll.
+  const list = document.querySelector(".list");
   const item = document.querySelector(".item");
   const itemWidth = item.offsetWidth;
 
   function handleClick(direction) {
-    // Based on the direction we call `scrollBy` with the item width we got earlier
     if(direction === "previous") {
       list.scrollBy({ left: -itemWidth, behavior: "smooth" });
     } else {

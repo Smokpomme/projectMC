@@ -6,12 +6,20 @@
     <title>Jeux</title>
     <link rel="stylesheet" href="minecraftdun.css">
     <script>
-      // Inclure le header
+      // Inclure fetch
       document.addEventListener('DOMContentLoaded', () => {
-          fetch('../header/header.html')
-              .then(response => response.text())
-              .then(data => document.getElementById('header').innerHTML = data);
+        fetch('../header/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
 
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
+                
           fetch('../social/social.html')
               .then(response => response.text())
               .then(data => document.getElementById('social').innerHTML = data);
@@ -24,25 +32,48 @@
 </head>
 <body>
     <main class="main-content">
+        <!-- appel header -->
         <div id="header"></div>
 
+        <!-- appel chatbot -->
+        <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+          <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+      </div>
+  
+      <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+          <div class="chatbot-header">
+              <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+              <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+          </div>
+          <div class="chatbot-body" id="chatbotBody">
+              <div class="chatbot-message received">
+                  <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+              </div>
+          </div>
+          <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+          <div class="chatbot-choices" id="chatbotChoices"></div>
+              <div class="chatbot-footer">
+              <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+              <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+              </div>
+          </div>
+          <script src="/Projet/src/chatbot/chatbot.js"></script>
+          <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
+
         
-        
+        <!-- carousel -->
         <div class="carousel-container">
-            <!-- Image principale -->
             <div class="main-image">
-                <img src="pic/mcdd.png" alt="Main Game Image" id="current-image"> <!-- Définit l'image principale ici -->
+                <img src="pic/mcdd.png" alt="Main Game Image" id="current-image"> 
             </div>
 
-            <!-- Description en bas à gauche -->
             <div class="description-container">
                 <h2 id="game-title">Minecraft Dungeons - Explorez les Donjons</h2>
                 <p id="game-description">Plongez dans un jeu d'action-aventure où vous explorez des donjons générés aléatoirement, combattez des monstres et récupérez des trésors épiques. Défiez le terrible Arch-Illager et sauvez le monde de Minecraft Dungeons.</p>
             </div>
 
-            <!-- Miniatures en bas à droite -->
             <div class="thumbnails">
-                <button class="arrow left-arrow">&#8249;</button> <!-- Flèche gauche -->
+                <button class="arrow left-arrow">&#8249;</button>
                 <img src="pic/mcdd.png" alt="Thumbnail 0" class="thumbnail" data-title="Minecraft Dungeons - La Quête Épique" data-description="Rejoignez vos amis et partez à l'aventure dans des donjons remplis de monstres redoutables.">
                 <img src="pic/remplacepic2.jpg" alt="Thumbnail 1" class="thumbnail" data-title="Mondes Épiques" data-description="Explorez des mondes générés aléatoirement et découvrez de nouveaux défis.">
                 <img src="pic/rempalcepic3.jpg" alt="Thumbnail 2" class="thumbnail" data-title="Création de Personnages" data-description="Personnalisez votre héros avec des équipements uniques et des compétences spéciales.">
@@ -50,14 +81,14 @@
                 <img src="pic/hallo.jpg" alt="Thumbnail 4" class="thumbnail" data-title="Halloween" data-description="Formez une équipe avec vos amis pour vaincre des boss puissants et collecter des trésors incroyables.">
                 <img src="pic/deep.jpg" alt="Thumbnail 5" class="thumbnail" data-title="Ocean" data-description="Formez une équipe avec vos amis pour vaincre des boss puissants et collecter des trésors incroyables.">
                 <img src="pic/cloud.jpg" alt="Thumbnail 6" class="thumbnail" data-title="Cloud" data-description="Formez une équipe avec vos amis pour vaincre des boss puissants et collecter des trésors incroyables.">
-                <button class="arrow right-arrow">&#8250;</button> <!-- Flèche droite -->
+                <button class="arrow right-arrow">&#8250;</button>
             </div>
                 
             </div>
             </div>
         </div>
 
-
+        <!-- communauter -->
         <section class="community-creations">
             <h2>Fonctionnement</h2>
             <div class="creations-grid">
@@ -88,11 +119,10 @@
                         <h3>Explore des niveaux plein d’action et truffés de trésors dans une quête épique pour sauver les villageois et détruire le terrible Arch-Illager !</h3>
                     </div>
                 </div>
-                <!-- Ajoutez autant de cartes que nécessaire -->
             </div>
         </section>
 
-
+        <!-- container -->
         <div class="collection-container">
           <div class="collection-text">
             <h1>L’aventure Ultime continue !</h1>
@@ -145,12 +175,7 @@
           </div>
         </div>
 
-        
-
-
-
-
-        
+        <!-- plateforme container -->
         <div class="platforms-container">
             <h1 class="platforms-title">Achetez Minecraft Dungeons !</h1>
             <p class="platforms-p">Minecraft Dungeons est accessible en plusieurs Editions :</p>
@@ -168,6 +193,7 @@
             </div>
         </div>
 
+        <!-- news -->
         <div class="News">
             <h1 class="News_title">Nouveautés</h1>
             <p class="News_p">
@@ -178,16 +204,14 @@
             <a href="/Projet/src/actu/actu.html" class="News_actu">Voir toutes les actualités</a>
         </div>
 
+        <!-- appel social -->
         <div id="social"></div>
-
     </main>
 
-
-    
+    <!-- appel footer -->
     <div id="footer"></div>
 
-
-
+    <!-- appel js -->
     <script src="minecraftdun.js"></script>
 </body>
 </html>

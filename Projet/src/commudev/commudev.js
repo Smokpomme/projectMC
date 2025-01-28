@@ -50,7 +50,7 @@ function closePopup() {
   document.getElementById('popup').style.display = 'none';
 }
 
-// À l'ouverture de la page, assurez-vous que le popup est caché
+// popup cahcer à l'ouverture de la page
 window.onload = function() {
   document.getElementById('popup').style.display = 'none';
 };

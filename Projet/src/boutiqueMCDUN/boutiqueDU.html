@@ -6,12 +6,20 @@
     <title>Jeux</title>
     <link rel="stylesheet" href="boutiqueDU.css">
     <script>
-        // Inclure le header
+        // Inclure fetch
         document.addEventListener('DOMContentLoaded', () => {
             fetch('../header/header.html')
                 .then(response => response.text())
-                .then(data => document.getElementById('header').innerHTML = data);
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
 
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
+                
             fetch('../social/social.html')
                 .then(response => response.text())
                 .then(data => document.getElementById('social').innerHTML = data);
@@ -24,18 +32,41 @@
 </head>
 <body>
     <main class="main-content">
+    <!-- appel header -->
     <div id="header">
     </div>
 
+    <!-- appel chatbot -->
+    <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+        <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
+    </div>
 
+    <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+        <div class="chatbot-header">
+            <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message received">
+                <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+            </div>
+        </div>
+        <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+        <div class="chatbot-choices" id="chatbotChoices"></div>
+            <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+            <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+            </div>
+        </div>
+        <script src="/Projet/src/chatbot/chatbot.js"></script>
+        <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
 
+    <!-- container -->
     <div class="container">
-      <!-- Conteneur pour l'image principale -->
       <div class="image-container">
         <img class="main-image" src="pic/mcdu.jpg" alt="Minecraft Image">
       </div>
     
-      <!-- Sélection des versions à droite -->
       <div class="version-selection">
         <img class="versionLOGO" src="pic/mcdunlogo.avif" alt="Start"> 
         <h2>Sélectionnez une version</h2>
@@ -86,23 +117,20 @@
         Posséder l’Édition Ultime, c’est avoir accès à l’expérience complète pour un prix inférieur à celui des achats séparés. Obtenez votre copie dès aujourd’hui !</p>
     </div>
       
-
+    <!-- slider -->
     <div class="sliderMC">
       <h2 class="slider-titleMC">CAPTURES D'ÉCRAN DU JEU</h2>
     
-      <!-- Grande image principale -->
       <div class="main-slideMC">
         <img class="main-imageMC" src="pic/mcdu1.avif" alt="Main Image">
       </div>
     
-      <!-- Description de l'image -->
       <p class="image-descriptionMC">Embarquez-vous dans une aventure commune ! Jouez avec vos amis en personne ou en ligne grâce au jeu multiplateforme.</p>
     
-      <!-- Boutons pour naviguer -->
       <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
       <div class="next" onclick="moveSlide(1)">&#10095;</div>
     
-      <!-- Miniatures en dessous du slider principal -->
+
       <div class="thumbnail-containerMC">
         <img src="pic/mcdu1.avif" alt="Thumbnail 1" onclick="selectSlide(0)" class="thumbnail">
         <img src="pic/mcdu2.jpg" alt="Thumbnail 2" onclick="selectSlide(1)" class="thumbnail">
@@ -110,12 +138,7 @@
       </div>
     </div>
 
-
-
-
-
-
-
+    <!-- section communauter -->
     <section class="community-creations">
         <h2 class="section-title">Faits marquants</h2>
         <div class="creations-grid">
@@ -123,7 +146,7 @@
             <div class="creation-card" onclick="toggleFlip(this)">
                 <div class="flip-card">
                     <div class="flip-card-front color-background1">
-                        <div class="creation-title">S'UNIR</div> <!-- Titre ajouté -->
+                        <div class="creation-title">S'UNIR</div> 
                     </div>
                     <div class="flip-card-back">
                         <div class="creation-info">
@@ -134,11 +157,10 @@
                 </div>
             </div>
     
-            <!-- Card 2 avec couleur de fond et titre -->
             <div class="creation-card" onclick="toggleFlip(this)">
                 <div class="flip-card">
                     <div class="flip-card-front color-background2">
-                        <div class="creation-title">COMBATTRE</div> <!-- Titre ajouté -->
+                        <div class="creation-title">COMBATTRE</div> 
                     </div>
                     <div class="flip-card-back">
                         <div class="creation-info">
@@ -149,11 +171,10 @@
                 </div>
             </div>
     
-            <!-- Card 3 avec couleur de fond et titre -->
             <div class="creation-card" onclick="toggleFlip(this)">
                 <div class="flip-card">
                     <div class="flip-card-front color-background3">
-                        <div class="creation-title">SURVIVRE</div> <!-- Titre ajouté -->
+                        <div class="creation-title">SURVIVRE</div> 
                     </div>
                     <div class="flip-card-back">
                         <div class="creation-info">
@@ -164,12 +185,12 @@
                 </div>
             </div>
 
-            <!-- Image 4 -->
+
 <div class="creation-card" onclick="toggleFlip(this)">
     <div class="flip-card">
         <div class="flip-card-front">
             <img src="pic/multi.jpg" alt="Costumes et Skins" class="creation-image">
-            <div class="creation-overlay">JEU MULTIJOUEURS !</div> <!-- Overlay avec le titre -->
+            <div class="creation-overlay">JEU MULTIJOUEURS !</div> 
         </div>
         <div class="flip-card-back">
             <div class="creation-info">
@@ -180,12 +201,12 @@
     </div>
 </div>
 
-<!-- Image 5 -->
+
 <div class="creation-card" onclick="toggleFlip(this)">
     <div class="flip-card">
         <div class="flip-card-front">
             <img src="pic/lala.jpg" alt="Costumes et Skins" class="creation-image">
-            <div class="creation-overlay">ÉQUIPEZ-VOUS !</div> <!-- Overlay avec le titre -->
+            <div class="creation-overlay">ÉQUIPEZ-VOUS !</div> 
         </div>
         <div class="flip-card-back">
             <div class="creation-info">
@@ -196,12 +217,12 @@
     </div>
 </div>
 
-<!-- Image 6 -->
+
 <div class="creation-card" onclick="toggleFlip(this)">
     <div class="flip-card">
         <div class="flip-card-front">
             <img src="pic/option.jpg" alt="Costumes et Skins" class="creation-image">
-            <div class="creation-overlay">OPTIONS !</div> <!-- Overlay avec le titre -->
+            <div class="creation-overlay">OPTIONS !</div> 
         </div>
         <div class="flip-card-back">
             <div class="creation-info">
@@ -212,23 +233,20 @@
     </div>
 </div>
 
-
-            <!-- Ajoute plus d'images si besoin -->
         </div>
     </section>
 
 
 
-
+    <!-- appel social -->
     <div id="social"></div>
-
 
     </main>
     
+    <!-- appel footer -->
     <div id="footer"></div>
 
-    
-
+    <!-- appel js -->
     <script src="boutiqueDU.js"></script>
 </body>
 </html>

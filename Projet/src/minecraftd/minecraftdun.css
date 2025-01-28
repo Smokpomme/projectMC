@@ -6,6 +6,7 @@ body {
   overflow-x: hidden;
 }
 
+/* font */
 @font-face {
     font-family: "CUSTOM";
     src: url("../../FONT/MIN.woff2");
@@ -21,67 +22,58 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 250vh;
-
   }
-
-
-
-
-
 
 /* Conteneur du carrousel */
 .carousel-container {
     display: flex;
-    flex-direction: column; /* Changement de flex-direction pour empiler les éléments */
+    flex-direction: column; 
     justify-content: center;
     align-items: center;
-    height: auto; /* Permet d'ajuster la hauteur automatiquement */
+    height: auto; 
     position: relative;
     background-color: #190D19;
     padding: 0px;
     box-sizing: border-box;
 }
 
-/* Image principale */
 .main-image {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 115vh; /* Ajustez la hauteur selon vos besoins */
-    margin-bottom: 20px; /* Espacement entre l'image principale et la description */
+    height: 115vh; 
+    margin-bottom: 20px; 
 }
 
 .main-image img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Couvre tout le conteneur en conservant les proportions */
+    object-fit: cover; 
     border-radius: 10px;
 }
 
 /* Description */
 .description-container {
-    display: flex; /* Ajout de flexbox pour centrer le contenu */
-    flex-direction: column; /* Aligne le contenu verticalement */
-    align-items: center; /* Centre horizontalement */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
     color: white;
     font-family: 'CUSTOM';
     max-width: 40%;
-
     padding: 20px;
     border-radius: 0px;
-    margin-bottom: 20px; /* Espacement entre la description et les miniatures */
+    margin-bottom: 20px; 
 }
-
 
 /* Miniatures */
 .thumbnails {
     display: flex;
-    align-items: center; /* Centre verticalement les éléments */
+    align-items: center; 
     gap: 10px;
-    justify-content: center; /* Centre les miniatures */
-    overflow: hidden; /* Cache les débordements */
-    position: relative; /* Pour positionner les flèches */
+    justify-content: center; 
+    overflow: hidden;
+    position: relative; 
     margin-bottom: 40px;
 }
 
@@ -89,36 +81,32 @@ body {
 .arrow {
     background-color: transparent;
     border: none;
-    font-size: 2rem; /* Ajuste la taille de la flèche */
-    color: white; /* Couleur des flèches */
+    font-size: 2rem; 
+    color: white; 
     cursor: pointer;
-    padding: 10px; /* Espacement autour des flèches */
-    z-index: 10; /* Met les flèches au-dessus des miniatures */
+    padding: 10px; 
+    z-index: 10; 
 }
 
 .thumbnail {
-    width: 270px; /* Augmente la taille des vignettes */
-    height: 160px; /* Augmente la taille des vignettes */
+    width: 270px; 
+    height: 160px; 
     object-fit: cover;
     border-radius: 0px;
     cursor: pointer;
     border: 2px solid transparent;
-    transition: transform 0.2s; /* Transition pour l'effet au survol */
+    transition: transform 0.2s; 
 }
 
 .thumbnail:hover {
-    transform: scale(1.1); /* Effet de zoom au survol */
+    transform: scale(1.1); 
 }
 
 .thumbnail.selected {
     border-color: #4CAF50;
 }
 
-
-
-
-
-
+/* communauter */
 .community-creations {
   padding: 20px;
   text-align: center;
@@ -139,10 +127,9 @@ body {
   padding: 20px 0;
 }
 
-
 .creation-card {
-  overflow: hidden; /* Conserve pour limiter le débordement des images */
-  transition: none; /* Pas d'effet de survol */
+  overflow: hidden; 
+  transition: none; 
 }
 
 .image-container {
@@ -153,15 +140,13 @@ body {
   object-fit: contain;
 }
 
-
 .creation-image {
   width: 100%;
-  height: auto; /* Ajuste la hauteur automatiquement */
-  max-height: none; /* Permet à l'image de dépasser le conteneur si nécessaire */
-  object-fit: contain; /* Garde l'image entière sans la couper */
-  transition: none; /* Pas d'effet de survol */
+  height: auto; 
+  max-height: none; 
+  object-fit: contain; 
+  transition: none; 
 }
-
 
 .creation-info {
   padding: 10px;
@@ -188,18 +173,12 @@ body {
   margin: 5px 0 0 0;
 }
 
-
-
-
-
-
-
 /* Conteneur principal */
 .collection-container {
   display: grid;
   gap: 20px;
   padding: 50px 20px;
-  background-color: black; /* Fond noir pour l'ensemble du conteneur */
+  background-color: black; 
 }
 
 /* Texte principal */
@@ -214,13 +193,13 @@ body {
 .collection-text h1 {
   font-size: 3em;
   margin-bottom: 20px;
-  color: white; /* Texte blanc */
+  color: white; 
 }
 
 .collection-text p {
   font-size: 1.2em;
   margin-bottom: 20px;
-  color: white; /* Texte blanc */
+  color: white; 
 }
 
 /* Carrousel */
@@ -232,7 +211,7 @@ body {
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   overflow: hidden;
-  width: 100%; /* S'assure que la largeur soit à 100% */
+  width: 100%; 
 }
 
 .item {
@@ -247,11 +226,11 @@ body {
 
 .img_li {
   width: 100%;
-  height: auto; /* Laisser l'image s'ajuster automatiquement */
-  max-height: 60vh; /* Limite l'image à 60% de la hauteur de l'écran */
+  height: auto; 
+  max-height: 60vh; 
   object-fit: cover;
   
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Légère ombre */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 
 /* Description */
@@ -259,24 +238,22 @@ body {
   width: 100%;
   text-align: center;
   padding: 8px 0;
-  font-size: 1rem; /* Taille du texte */
+  font-size: 1rem; 
   box-sizing: border-box;
-  max-width: 90%; /* Limiter la largeur pour un meilleur affichage */
-  margin: 0 auto; /* Centrer la description */
-  color: white; /* Texte blanc */
+  max-width: 90%; 
+  margin: 0 auto; 
+  color: white; 
   font-family: 'NOTO';
 }
 .description h1{
   font-family: 'CUSTOM';
   font-size: 2.2rem;
-  
-  
 }
 .content {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrer horizontalement */
-  justify-content: flex-start; /* Aligner vers le haut */
+  align-items: center; 
+  justify-content: flex-start; 
   height: 100%;
 }
 
@@ -287,8 +264,8 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  align-items: center; /* Alignement vertical des boutons */
-  overflow: hidden; /* Cache le contenu qui dépasse */
+  align-items: center; 
+  overflow: hidden; 
 }
 
 /* Boutons du carrousel */
@@ -298,7 +275,7 @@ body {
   width: 4rem;
   height: 4rem;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.0); /* Fond semi-transparent pour ne pas masquer trop l'image */
+  background-color: rgba(0, 0, 0, 0.0); 
   color: white;
   border: none;
   cursor: pointer;
@@ -306,21 +283,21 @@ body {
   display: flex; 
   align-items: center; 
   justify-content: center;
-  transition: background-color 0.3s ease; /* Transition fluide sur le hover */
+  transition: background-color 0.3s ease; 
 }
 
 .button--previous {
-  left: 1rem; /* Placé à gauche, légèrement à l'intérieur du carrousel */
+  left: 1rem; 
 }
 
 /* Bouton suivant */
 .button--next {
-  right: 1rem; /* Placé à droite, légèrement à l'intérieur du carrousel */
+  right: 1rem; 
 }
 
-/* Effet au survol (hover) */
+/* Effet au survol */
 .button:hover::before {
-  border-color: #ffa41f; /* Couleur de la flèche lors du survol */
+  border-color: #ffa41f; 
 }
 
 /* Flèche à l'intérieur des boutons */
@@ -335,20 +312,18 @@ body {
 
 /* Flèche directionnelle pour le bouton précédent */
 .button--previous::before {
-  transform: rotate(135deg); /* Flèche pointant vers la gauche */
+  transform: rotate(135deg); 
 }
 
 /* Flèche directionnelle pour le bouton suivant */
 .button--next::before {
-  transform: rotate(-45deg); /* Flèche pointant vers la droite */
+  transform: rotate(-45deg);
 }
 
 /* Masquer les flèches quand elles sont désactivées */
 .button:disabled {
   display: none;
 }
-
-
 
 .platforms-container {
   text-align: center;
@@ -374,12 +349,11 @@ body {
 }
 
 .platform-icon {
-  width: 30px; /* Adjust this value as needed */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Ensures the image behaves like a block element */
-  margin:  auto; /* Centers the image horizontally */
+  width: 30px; 
+  height: auto; 
+  display: block; 
+  margin:  auto; 
 }
-
 
 .platform-item {
   display: flex;
@@ -389,8 +363,6 @@ body {
   color: white;
   width: 150px;
 }
-
-
 
 .platform-item p {
   margin: 10px 0;
@@ -414,9 +386,6 @@ body {
   transform: scale(1.1);
 }
 
-
-
-
 .News {
   background-color: #32122A; 
   padding: 20px 0; 
@@ -431,11 +400,11 @@ body {
 }
 
 .News_p {
-  font-family: 'NOTO', sans-serif; /* Ajout d'une police de secours */
+  font-family: 'NOTO', sans-serif; 
   color: white; 
-  text-align: left; /* Aligne le texte à gauche */
+  text-align: left; 
   margin: 10px 0; 
-  font-size: 1em; /* Taille de police correcte */
+  font-size: 1em; 
 }
 
 .News_actu {
@@ -445,19 +414,17 @@ body {
   margin-top: 10px; 
   font-weight: bold; 
   transition: color 0.3s, text-decoration 0.3s;
-  font-family: "CUSTOM", sans-serif; /* Ajout d'une police de secours */
+  font-family: "CUSTOM", sans-serif; 
   font-size: 1.2em;
 }
 
 .News_actu:hover {
-  color: white; /* Couleur du texte au survol */
-  text-decoration: underline; /* Surlignage au survol */
+  color: white; 
+  text-decoration: underline; 
 }
 
-
-/* Responsive Styles */
-
-/* Desktop (≥1281px) */
+/* Responsive */
+/* pc */
 @media (min-width: 1281px) {
   .carousel-container {
     height: auto;
@@ -494,7 +461,7 @@ body {
   }
 }
 
-/* Laptop (1280px to 769px) */
+/* pc portable */
 @media (max-width: 1280px) and (min-width: 769px) {
   .carousel-container {
     padding: 15px 0;
@@ -530,7 +497,7 @@ body {
   }
 }
 
-/* Tablet (768px to 481px) */
+/* Tablette */
 @media (max-width: 768px) and (min-width: 481px) {
   .carousel-container {
     padding: 10px 0;
@@ -570,7 +537,7 @@ body {
   }
 }
 
-/* Mobile (≤480px) */
+/* Mobile */
 @media (max-width: 480px) {
   .carousel-container {
     padding: 10px 0;

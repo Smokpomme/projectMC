@@ -6,6 +6,7 @@ body {
     overflow-x: hidden;
   }
   
+  /* font */
   @font-face {
     font-family: "CUSTOM";
     src: url("../../FONT/MIN.woff2");
@@ -24,8 +25,7 @@ body {
   
     }
   
-  
-  
+    /* container */
   .title-container {
     text-align: center;
     margin: 0; 
@@ -34,14 +34,13 @@ body {
     padding-bottom: 30px;
     position: relative;
     
-  
   }
   
   .minecraft-news-title {
     font-family: "CUSTOM"; 
     font-size: 48px; 
     color: white; 
-    text-align: center; /* Centre le texte pour un meilleur aspect sur mobile */
+    text-align: center; 
   }
   
   .mc_p {
@@ -50,14 +49,10 @@ body {
     font-size: 14px;
     margin-left: 200px;
     margin-right: 200px;
-    text-align: center; /* Centre le texte sur mobile */
+    text-align: center;
   }
 
- 
-
-
-
-
+  /*slider */
   .slider {
     position: relative;
     width: 100%;
@@ -115,32 +110,27 @@ body {
     right: 20px;
 }
 
-/* Effet au survol pour un aspect plus "cubique" */
+/* Effet au survol pour un aspect cubique */
 .prev:hover, .next:hover {
-    background-color: rgb(24, 24, 24); /* Couleur plus intense */
-    box-shadow: 4px 4px 0 #000000; /* Accentuer l'effet cubique */
+    background-color: rgb(24, 24, 24); 
+    box-shadow: 4px 4px 0 #000000; 
     color: #3C8527;
 }
 
-
-
-
-
-
-
+/* partage */
 
 .share {
-    display: flex; /* Utilise flexbox pour aligner les éléments */
-    flex-direction: column; /* Dispose les éléments en colonne */
-    align-items: center; /* Centre horizontalement */
-    text-align: center; /* Centre le texte dans les divs */
-    color: rgb(0, 0, 0); /* Change la couleur du texte en blanc */
-    padding: 20px; /* Ajoute un peu d'espace autour */
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    color: rgb(0, 0, 0); 
+    padding: 20px; 
     background-color: #ececec;
   }
   
   .earth-icon img {
-    max-width: 50%; /* Assure que l'image ne déborde pas */
+    max-width: 50%; 
   }
   
   .earth-description h1{
@@ -177,11 +167,7 @@ body {
     transform: translateY(2px);
   }
 
-
-
-
-
-
+/* carousel container */
   .carousel-container {
     display: flex;
     align-items: center;
@@ -224,8 +210,8 @@ body {
 
 }
 .carr-prev:hover, .carr-next:hover {
-    background-color: rgb(24, 24, 24); /* Couleur plus intense */
-    box-shadow: 4px 4px 0 #000000; /* Accentuer l'effet cubique */
+    background-color: rgb(24, 24, 24); 
+    box-shadow: 4px 4px 0 #000000; 
     color: #3C8527;
 
 }
@@ -258,10 +244,7 @@ body {
     margin-top: 10px;
 }
 
-
-
-
-/* Container Styles */
+/* communauter  */
 .community-creations {
     background-color: #3a3a3a;
     padding: 40px;
@@ -281,32 +264,30 @@ body {
   }
   
   .creation-info {
-    padding: 20px; /* Ajout de padding pour espacer le texte */
-    text-align: left; /* Aligner le texte à gauche */
-    color: black; /* Changer la couleur du texte en noir */
+    padding: 20px;
+    text-align: left; 
+    color: black; 
   }
   
   .creation-info h3 {
-    font-size: 1.5em; /* Augmenter la taille du titre */
-    margin-bottom: 10px; /* Espacement sous le titre */
+    font-size: 1.5em; 
+    margin-bottom: 10px;
   }
   
   .creation-info p {
-    font-size: 0.8em; /* Taille du texte pour le paragraphe */
+    font-size: 0.8em; 
     font-family: "NOTO";
   }
   
-  /* Grid Layout for 3x3 structure */
+  /* Grid Layout pour 3x3 */
   .creations-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);  /* 3 colonnes de largeur égale */
-    gap: 15px;  /* Espace entre les cartes */
-    justify-items: center;  /* Centrer les éléments dans chaque colonne */
-    max-width: 770px;  /* Largeur maximale pour éviter que ça prenne trop de place */
-    margin: 0 auto;  /* Centrer la grille */
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 15px; 
+    justify-items: center; 
+    max-width: 770px;  
+    margin: 0 auto;  
   }
-  
-
   
   .creation-card {
     position: relative;
@@ -314,19 +295,19 @@ body {
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
     
-    aspect-ratio: 1 / 1; /* Garde les cartes carrées */
-    background-color: #f0f0f0; /* Couleur de fond par défaut */
+    aspect-ratio: 1 / 1; 
+    background-color: #f0f0f0; 
   }
   
   .creation-card img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Assure que l'image s'adapte à la taille de la carte */
+    object-fit: cover; 
     transition: transform 0.3s ease-in-out;
   }
   
   .creation-card:hover img {
-    transform: scale(1.05); /* Légère augmentation au survol */
+    transform: scale(1.05); 
   }
   
   .creation-info {
@@ -334,10 +315,10 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent pour la description */
+    background: rgba(0, 0, 0, 0.7); 
     color: white;
     padding: 10px;
-    max-height: 65px; /* Limite la hauteur visible par défaut */
+    max-height: 65px; 
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
   }
@@ -350,33 +331,33 @@ body {
   
   .creation-info h3 {
     display: inline-block;
-    background-color: white; /* Fond blanc pour le titre */
-    color: black; /* Texte noir pour contraster avec le fond blanc */
+    background-color: white; 
+    color: black; 
     padding: 5px 10px;
     font-size: 0.9em;
     font-weight: bold;
     margin-bottom: 10px;
-    text-transform: uppercase; /* Mettre le texte en majuscules */
+    text-transform: uppercase; 
   }
   
   /* Affiche toute la description au survol */
   .creation-card:hover .creation-info {
-    max-height: 200px; /* Augmente la hauteur pour afficher toute la description */
+    max-height: 200px; 
   }
   
   
- /* Style du Popup */
+ /* Popup */
 .popup {
-  display: none; /* Le popup est caché par défaut */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  background-color: rgba(0, 0, 0, 0.5); 
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Le popup est au-dessus de tout */
+  z-index: 9999; 
 }
 
 /* Contenu du Popup */
@@ -386,7 +367,7 @@ body {
   border-radius: 10px;
   max-width: 500px;
   text-align: center;
-  position: relative; /* Ajoutez cette ligne pour positionner la croix à l'intérieur du contenu */
+  position: relative; 
 }
 
 /* Bouton de fermeture */
@@ -394,7 +375,7 @@ body {
   font-size: 30px;
   color: #000;
   cursor: pointer;
-  position: absolute; /* Positionnement absolu pour placer la croix en haut à droite */
+  position: absolute; 
   top: 10px;
   right: 10px;
 }
@@ -405,14 +386,12 @@ body {
 }
 
 
-
-
 /* Conteneur principal de la FAQ */
 .faq-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centre le contenu horizontalement */
-  justify-content: center; /* Centre le contenu verticalement */
+  align-items: center; 
+  justify-content: center; 
   text-align: center;
   padding: 50px;
   background-color: white;
@@ -437,7 +416,7 @@ body {
 
 /* Style pour chaque colonne */
 .faq-column {
-  flex: 1; /* Chaque colonne prend 50% de la largeur */
+  flex: 1; 
 }
 
 /* Style pour chaque élément FAQ */
@@ -455,25 +434,23 @@ body {
   font-size: 14px;
   color: black;
   line-height: 1.5;
-  margin: 0 auto; /* Centrer les paragraphes */
+  margin: 0 auto; 
   text-align: left;
 }
 
 .faq-item a {
   color: #458f31;
-  text-decoration: underline; /* Ajoute le soulignement par défaut */
+  text-decoration: underline; 
   transition: text-decoration 0.3s ease;
 }
 
 .faq-item a:hover {
-  text-decoration: none; /* Retire le soulignement au survol */
+  text-decoration: none; 
 }
 
+/* Responsive Breakpoints */
 
-
-  /* Responsive Breakpoints */
-
-/* Desktop */
+/* pc */
 @media (min-width: 1281px) {
   body {
     font-size: 16px;
@@ -507,7 +484,7 @@ body {
   }
 }
 
-/* Laptop */
+/* pc portable */
 @media (max-width: 1280px) and (min-width: 769px) {
   body {
     font-size: 15px;
@@ -540,7 +517,7 @@ body {
   }
 }
 
-/* Tablet */
+/* Tablette */
 @media (max-width: 768px) and (min-width: 481px) {
   body {
     font-size: 14px;

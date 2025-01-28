@@ -1,7 +1,9 @@
 <link rel="stylesheet" href="/Projet/src/header/header.css">
 <div class="header">
     <div class="top-left">
-        <img class="logo" src="pic/mc.svg" alt="Start">
+        <a href="/index.html">
+            <img class="logo" src="pic/mc.svg" alt="Start">
+        </a>
     </div>
     <div class="top-center">
         <div class="dropdown">
@@ -43,8 +45,19 @@
     </div>
 
     <div class="top-right">
-        <button class="relief-button" id="connexionButton">Connexion</button>
+        <button class="relief-button" id="connexionButton" onclick="showCONPopup()">Connexion</button> 
+      </div>
+      
+      <!-- Popup -->
+    <div id="CONpopup" class="CONpopup">
+        <div class="CONpopup-content">
+            <span class="CONpopup-close" onclick="closeCONPopup()">&times;</span>
+            <h2>Connexion non disponible</h2>
+            <p>La page de connexion n'est pas encore disponible. Connectez-vous plus tard !</p>
+        </div>
     </div>
+    <script src="/Projet/src/header/header.js"></script>
+
 </div>
 
 

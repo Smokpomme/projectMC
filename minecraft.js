@@ -47,14 +47,11 @@ const gameDescription = document.getElementById('game-description');
 
 thumbnails.forEach(thumbnail => {
     thumbnail.addEventListener('click', function() {
-        // Changer l'image principale
         mainImage.src = this.src;
 
-        // Mettre à jour le titre et la description
         gameTitle.textContent = this.dataset.title;
         gameDescription.textContent = this.dataset.description;
 
-        // Mettre à jour la sélection des miniatures
         thumbnails.forEach(thumb => thumb.classList.remove('selected'));
         this.classList.add('selected');
     });

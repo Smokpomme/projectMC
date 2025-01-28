@@ -6,11 +6,19 @@
     <title>commu</title>
     <link rel="stylesheet" href="commudev.css">
     <script>
-        // Inclure le header
+        // Inclure fetch
         document.addEventListener('DOMContentLoaded', () => {
             fetch('../header/header.html')
                 .then(response => response.text())
-                .then(data => document.getElementById('header').innerHTML = data);
+                .then(data => {
+                    document.getElementById('header').innerHTML = data;
+
+                    // Charger le script header.js
+                    const script = document.createElement('script');
+                    script.src = '../header/header.js';
+                    document.body.appendChild(script);
+                })
+                .catch(error => console.error('Erreur lors du chargement du header:', error));
 
             fetch('../social/social.html')
                 .then(response => response.text())
@@ -25,14 +33,37 @@
 <body>
 
     <main class="main-content">
-    <div id="header">
-        
+    <!-- appel header -->
+    <div id="header"></div>
+
+    <!-- appel chatbot -->
+    <div class="chatbot-icon" id="chatbotIcon" onclick="toggleChatbot()">
+        <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot">
     </div>
 
-        
+    <div class="chatbot-window" id="chatbotWindow" style="display: none;">
+        <div class="chatbot-header">
+            <img src="/Projet/src/chatbot/PICchatbot/png.PNG" alt="Chatbot Icon"><span>Gaston le Bot</span>
+            <span class="close-btn" onclick="toggleChatbot()">&times;</span>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="chatbot-message received">
+                <p>Salut ! Moi, c'est Gaston, un PNJ savant. Si tu as des questions sur Minecraft, quel que soit le sujet, je suis là pour t'aider. Alors, n'hésite pas !</p>
+            </div>
+        </div>
+        <span class="toggle-choices" id="toggleChoices" onclick="toggleChoicesMenu()">▼</span>
+        <div class="chatbot-choices" id="chatbotChoices"></div>
+            <div class="chatbot-footer">
+            <input type="text" id="chatbot-input" placeholder="Écrivez votre craft..." />
+            <button id="chatbot-send" onclick="handleUserInput()">Envoyer</button>
+            </div>
+        </div>
+        <script src="/Projet/src/chatbot/chatbot.js"></script>
+        <link rel="stylesheet" href="/Projet/src/chatbot/chatbot.css">
+
+     <!-- sliderr -->   
     <div class="slider">
         <div class="slides">
-          <!-- Conteneur pour les images -->
           <div class="slide active">
             <img src="pic/monocraft.png" alt="Image 1">
           </div>
@@ -43,12 +74,11 @@
             <img src="pic/dev2.jpg" alt="Image 3">
           </div>
         </div>
-        <!-- Boutons pour naviguer -->
         <div class="prev" onclick="moveSlide(-1)">&#10094;</div>
         <div class="next" onclick="moveSlide(1)">&#10095;</div>
     </div>
     
-        
+    <!-- Partage -->
     <div class="share">
         <div class="earth-description">
           <h1>APPRENEZ À DEVENIR CRÉATEUR MINECRAFT À L’AIDE D’ADD-ONS</h1>
@@ -61,6 +91,7 @@
       </div>
       </div>
 
+      <!-- carrousel  -->
       <div class="carousel-container">
         <div class="carousel-description">
             <h2>Quels sont les add-ons de Minecraft que vous pouvez créer ?</h2>
@@ -94,16 +125,13 @@
         </div>
         </div>
 
-
-
-  
+        <!-- section communauter -->
         <section class="community-creations" id="community">
             <h2 class="section-title">Actualités des créateurs</h2>
             <p class="section-description">
                 Voici l'actualité des créateurs de contenu, peut-être que certaines d'entre elles vous intéresseront !
             </p>
             <div class="creations-grid">
-                <!-- Image 1 -->
                 <div class="creation-card">
                     <img src="pic/Z1.avif" alt="Construction Monumentale" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
@@ -112,7 +140,6 @@
                     </div>
                 </div>
         
-                <!-- Image 2 -->
                 <div class="creation-card">
                     <img src="pic/Z2.png" alt="Explorations en Forêt" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
@@ -121,7 +148,6 @@
                     </div>
                 </div>
         
-                <!-- Image 3 -->
                 <div class="creation-card">
                     <img src="pic/Z3.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
@@ -130,7 +156,6 @@
                     </div>
                 </div>
         
-                <!-- Image 4 -->
                 <div class="creation-card">
                     <img src="pic/Z4.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
@@ -139,7 +164,6 @@
                     </div>
                 </div>
         
-                <!-- Image 5 -->
                 <div class="creation-card">
                     <img src="pic/Z5.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
@@ -148,7 +172,6 @@
                     </div>
                 </div>
                 
-                <!-- Image 6 -->
                 <div class="creation-card">
                     <img src="pic/Z6.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
@@ -157,7 +180,6 @@
                     </div>
                 </div>
 
-                <!-- Image 7 -->
                 <div class="creation-card">
                     <img src="pic/Z7.png" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
@@ -166,7 +188,6 @@
                     </div>
                 </div>
 
-                <!-- Image 8 -->
                 <div class="creation-card">
                     <img src="pic/Z8.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
@@ -175,7 +196,6 @@
                     </div>
                 </div>
 
-                <!-- Image 9 -->
                 <div class="creation-card">
                     <img src="pic/Z9.jpg" alt="Costumes et Skins" class="creation-image" onclick="showPopup()">
                     <div class="creation-info">
@@ -183,9 +203,6 @@
                         <p>Le meilleur pack de textures pour vos vidéos YouTube !</p>
                     </div>
                 </div>
-
-                
-                <!-- Ajoute plus d'images si besoin -->
             </div>
         </section>
 
@@ -198,11 +215,7 @@
             </div>
         </div>
 
-        
-
-
-      
-        
+        <!-- faq -->
         <div class="faq-container">
             <h1 class="faq-title">QUESTIONS FRÉQUENTES</h1>
             
@@ -261,15 +274,15 @@
             </div>
         </div>
         
-    
+        <!-- appel social -->
         <div id="social"></div>
 
     </main>
 
+    <!-- appel footer -->
     <div id="footer"></div>
 
-
-
+    <!-- appel js -->
     <script src="commudev.js"></script>
 </body>
 </html>

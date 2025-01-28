@@ -6,6 +6,7 @@ body {
   overflow-x: hidden;
 }
 
+/* font */
 @font-face {
   font-family: "CUSTOM";
   src: url("../../FONT/MIN.woff2");
@@ -25,11 +26,11 @@ body {
   }
 
 
-
+/* title */
 .title-container {
   text-align: center;
   margin: 0; 
-  background-image: url("pic/fond5.png");;
+  background-color: #4CAF50;
   padding-top: 90px;
   padding-bottom: 30px;
   position: relative;
@@ -40,39 +41,33 @@ body {
 .minecraft-news-title {
   font-family: "CUSTOM"; 
   font-size: 48px; 
-  color: white; 
-  text-align: center; /* Centre le texte pour un meilleur aspect sur mobile */
+  color: rgb(218, 218, 218); 
+  text-align: center; 
 }
 
 .mc_p {
   font-family: "NOTO"; 
-  color: white; 
+  color: rgb(224, 224, 224); 
   font-size: 14px;
   margin-left: 200px;
   margin-right: 200px;
-  text-align: center; /* Centre le texte sur mobile */
+  text-align: center; 
 }
-
-
-
-
-
 
 /* Conteneur principal */
 .collection-container {
-
-  display: flex; /* Utilisation de Flexbox */
-  justify-content: space-between; /* Sépare les deux sections */
-  align-items: flex-start; /* Aligne les sections en haut */
-  gap: 20px; /* Espace entre le texte et le carrousel */
+  display: flex; 
+  justify-content: space-between; 
+  align-items: flex-start; 
+  gap: 20px; 
   padding: 20px;
-  background-color: #041300; /* Fond noir */
+  background-color: #3a3a3a;
 }
 
 /* Texte principal */
 .collection-text {
-  flex: 1; /* Prend 1 part de l'espace disponible */
-  max-width: 40%; /* Limite la largeur de la section texte */
+  flex: 1; 
+  max-width: 40%; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -80,14 +75,14 @@ body {
 }
 
 .collection-text h1 {
-  font-size: 2.5em; /* Texte plus petit */
-  margin-bottom: 10px; /* Réduit l'espacement en dessous */
-  color: rgb(255, 255, 255); /* Texte blanc */
+  font-size: 2.5em; 
+  margin-bottom: 10px; 
+  color: rgb(255, 255, 255); 
 }
 
 .collection-text p {
-  font-size: 1em; /* Texte explicatif */
-  color: #ccc; /* Texte gris clair */
+  font-size: 1em; 
+  color: #ccc; 
   line-height: 1.5;
   padding-right: 150px;
 }
@@ -107,21 +102,20 @@ body {
 /* Carrousel */
 .list {
   display: flex;
-  gap: 10px; /* Espace réduit entre les items */
+  gap: 10px; 
   list-style: none;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   overflow-x: auto;
   width: 100%;
-  /* Apparence de la barre de défilement */
-  scrollbar-width: thin; /* Barre de défilement fine pour Firefox */
-  scrollbar-color: #327734 #041300; /* Couleur de la barre de défilement (la barre et le fond de la barre) */
+  scrollbar-width: thin; 
+  scrollbar-color: #ffffff #202020; 
 }
 
 .item {
   flex-shrink: 0;
-  width: 50%; /* Réduit la largeur des items */
-  min-height: 40vh; /* Réduit la hauteur minimale */
+  width: 50%; 
+  min-height: 40vh; 
   transition: transform 0.5s ease-in-out;
   scroll-snap-align: center;
   position: relative;
@@ -131,9 +125,9 @@ body {
 .img_li {
   width: 100%;
   height: auto;
-  max-height: 45vh; /* Limite l'image à 30% de la hauteur de l'écran */
+  max-height: 45vh; 
   object-fit: cover;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Légère ombre */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
 }
 
 /* Description */
@@ -141,7 +135,7 @@ body {
   width: 100%;
   text-align: left;
   padding: 5px 0;
-  font-size: 0.8rem; /* Taille de texte réduite */
+  font-size: 0.8rem; 
   box-sizing: border-box;
   max-width: 90%;
   margin: 0 auto;
@@ -151,7 +145,7 @@ body {
 
 .description h1 {
   font-family: 'CUSTOM';
-  font-size: 1.5rem; /* Réduit la taille du titre */
+  font-size: 1.5rem; 
 }
 
 /* Contenu */
@@ -161,23 +155,21 @@ body {
   align-items: center;
   justify-content: flex-start;
   height: 100%;
-  background-color: #3d3d3d;
+  background-color: #181818;
 }
 
 /* Conteneur du carrousel */
 .list-wrapper {
-  flex: 2; /* Prend 2 parts de l'espace disponible */
-  max-width: 60%; /* Limite la largeur de la section carrousel */
+  flex: 2; 
+  max-width: 60%; 
   display: flex;
   align-items: center;
   overflow: hidden;
 }
 
-
-
 /* Container Styles */
 .community-creations {
-  background-color: #327734;
+  background-color: rgb(36, 36, 36);
   padding: 40px;
   text-align: center;
   color: white;
@@ -195,44 +187,43 @@ body {
 }
 
 .creation-info {
-  padding: 20px; /* Ajout de padding pour espacer le texte */
-  text-align: left; /* Aligner le texte à gauche */
-  color: black; /* Changer la couleur du texte en noir */
+  padding: 20px; 
+  text-align: left; 
+  color: black; 
 }
 
 .creation-info h3 {
-  font-size: 1.5em; /* Augmenter la taille du titre */
-  margin-bottom: 10px; /* Espacement sous le titre */
+  font-size: 1.5em; 
+  margin-bottom: 10px; 
 }
 
 .creation-info p {
-  font-size: 0.8em; /* Taille du texte pour le paragraphe */
+  font-size: 0.8em; 
   font-family: "NOTO";
 }
 
-/* Grid Layout for 3x3 structure */
+/* Grid Layout pour 3x3 */
 .creations-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);  /* 3 colonnes de largeur égale */
-  gap: 10px;  /* Espace entre les cartes */
-  justify-items: center;  /* Centrer les éléments dans chaque colonne */
-  max-width: 770px;  /* Largeur maximale pour éviter que ça prenne trop de place */
-  margin: 0 auto;  /* Centrer la grille */
+  grid-template-columns: repeat(3, 1fr);  
+  gap: 10px;  
+  justify-items: center;  
+  max-width: 770px; 
+  margin: 0 auto;  
 }
 
 /* Card Styles */
 .creation-card {
   width: 100%;
-  max-width: 250px;  /* Largeur max de chaque carte */
+  max-width: 250px;  
   perspective: 1000px;
 }
 
 .creation-card:hover {
-  cursor: pointer; /* Indique que c'est cliquable */
-  transform: scale(1.05); /* Agrandit légèrement la carte */
-  transition: transform 0.3s ease; /* Ajoute une transition douce */
+  cursor: pointer; 
+  transform: scale(1.05); 
+  transition: transform 0.3s ease; 
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
-
 }
 
 
@@ -245,7 +236,7 @@ body {
 }
 
 .creation-card.flipped .flip-card {
-  transform: rotateY(180deg); /* Retourne la carte */
+  transform: rotateY(180deg); 
 }
 
 .flip-card-front, .flip-card-back {
@@ -279,35 +270,30 @@ body {
   margin: 0;
 }
 
-/* Flip Active Class */
 .flip-active .flip-card {
   transform: rotateY(180deg);
 }
 
-
-
-
-
-
+/* partage */
 .share {
-  display: flex; /* Utilise flexbox pour aligner les éléments */
-  flex-direction: column; /* Dispose les éléments en colonne */
-  align-items: center; /* Centre horizontalement */
-  text-align: center; /* Centre le texte dans les divs */
-  color: white; /* Change la couleur du texte en blanc */
-  padding: 20px; /* Ajoute un peu d'espace autour */
-  background-color: #041300;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  text-align: center; 
+  color: rgb(19, 19, 19); 
+  padding: 20px; 
+  background-color: #f1f1f1;
 }
 
 .earth-icon img {
-  max-width: 50%; /* Assure que l'image ne déborde pas */
+  max-width: 50%; 
 }
 
 .earth-description h1{
   margin-bottom: 40px;
 }
 .earth-description p {
-  font-size: 0.8em;
+  font-size: 0.9em;
   font-family: "NOTO";
   padding-left: 200px;
   padding-right: 200px;
@@ -339,16 +325,16 @@ body {
 
 /* Style du Popup */
 .popup {
-  display: none; /* Le popup est caché par défaut */
+  display: none; 
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  background-color: rgba(0, 0, 0, 0.5); 
   justify-content: center;
   align-items: center;
-  z-index: 9999; /* Le popup est au-dessus de tout */
+  z-index: 9999; 
 }
 
 /* Contenu du Popup */
@@ -358,7 +344,7 @@ body {
   border-radius: 10px;
   max-width: 500px;
   text-align: center;
-  position: relative; /* Ajoutez cette ligne pour positionner la croix à l'intérieur du contenu */
+  position: relative; 
 }
 
 /* Bouton de fermeture */
@@ -366,7 +352,7 @@ body {
   font-size: 30px;
   color: #000;
   cursor: pointer;
-  position: absolute; /* Positionnement absolu pour placer la croix en haut à droite */
+  position: absolute; 
   top: 10px;
   right: 10px;
 }
@@ -376,45 +362,44 @@ body {
   color: #f00;
 }
 
-
-/* Desktop - Large screens */
+/* Responsive */
+/* pc */
 @media screen and (max-width: 1600px) {
-  /* Ajustements spécifiques pour les grands écrans */
   .minecraft-news-title {
-    font-size: 48px; /* Titre principal un peu plus grand pour des écrans larges */
+    font-size: 48px;
   }
 
   .mc_p {
-    font-size: 16px; /* Ajuste la taille du texte pour une meilleure lisibilité */
+    font-size: 16px; 
     margin-left: 150px;
     margin-right: 150px;
   }
 
   .collection-container {
-    gap: 30px; /* Plus d'espace entre les sections */
+    gap: 30px; 
   }
 
   .collection-text h1 {
-    font-size: 2.2em; /* Titre légèrement plus grand */
+    font-size: 2.2em; 
   }
 
   .creation-card {
-    max-width: 300px; /* Légèrement plus large pour les grands écrans */
+    max-width: 300px; 
   }
 
   .earth-icon img {
-    max-width: 60%; /* Légèrement plus grand pour un affichage optimisé */
+    max-width: 60%;
   }
 
   .creations-grid {
-    grid-template-columns: repeat(3, 1fr); /* 3 colonnes sur desktop */
+    grid-template-columns: repeat(3, 1fr); 
   }
 }
 
-/* Laptop - Medium Screens */
+/* pc portable */
 @media screen and (max-width: 1280px) {
   .minecraft-news-title {
-    font-size: 42px; /* Un peu plus petit pour les laptops */
+    font-size: 42px; 
   }
 
   .mc_p {
@@ -428,26 +413,26 @@ body {
   }
 
   .collection-text h1 {
-    font-size: 2em; /* Réduction de la taille pour les écrans moyens */
+    font-size: 2em; 
   }
 
   .list-wrapper {
-    max-width: 80%; /* Réduit la largeur du carrousel */
+    max-width: 80%; 
   }
 
   .creations-grid {
-    grid-template-columns: repeat(3, 1fr); /* Toujours 3 colonnes */
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .earth-icon img {
-    max-width: 50%; /* Réduit la taille de l'icône */
+    max-width: 50%; 
   }
 }
 
-/* Tablet - Portrait Orientation */
+/* Tablette */
 @media screen and (max-width: 768px) {
   .minecraft-news-title {
-    font-size: 36px; /* Réduit la taille du titre */
+    font-size: 36px; 
   }
 
   .mc_p {
@@ -471,7 +456,7 @@ body {
   }
 
   .creations-grid {
-    grid-template-columns: 1fr 1fr; /* 2 colonnes pour les tablettes */
+    grid-template-columns: 1fr 1fr; 
     gap: 15px;
   }
 
@@ -480,14 +465,14 @@ body {
   }
 
   .earth-icon img {
-    max-width: 70%; /* Ajuste l'image pour les tablettes */
+    max-width: 70%;
   }
 }
 
-/* Mobile - Small screens */
+/* Mobile */
 @media screen and (max-width: 480px) {
   body {
-    font-size: 14px; /* Réduit la taille globale de la police */
+    font-size: 14px; 
   }
 
   .title-container {
@@ -496,7 +481,7 @@ body {
   }
 
   .minecraft-news-title {
-    font-size: 28px; /* Titre plus petit pour les petits écrans */
+    font-size: 28px; 
   }
 
   .mc_p {
@@ -506,7 +491,7 @@ body {
   }
 
   .collection-container {
-    gap: 10px; /* Réduit l'espacement entre les sections */
+    gap: 10px; 
   }
 
   .collection-text h1 {
@@ -522,7 +507,7 @@ body {
   }
 
   .creations-grid {
-    grid-template-columns: 1fr; /* Une seule colonne pour les petits écrans */
+    grid-template-columns: 1fr;
     gap: 10px;
   }
 
@@ -532,7 +517,7 @@ body {
   }
 
   .earth-icon img {
-    max-width: 80%; /* Ajuste l'image pour les mobiles */
+    max-width: 80%; 
   }
 }
 
