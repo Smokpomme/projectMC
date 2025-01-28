@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+/* css du chatbot */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 /* Style du bouton flottant */
 .chatbot-icon {
     position: fixed;
@@ -15,11 +19,19 @@
     z-index: 1000;
   
     /* Bordure animée par défaut marron */
+<<<<<<< HEAD
     background: conic-gradient(#8B4513, #A0522D, #8B4513, #A0522D); 
     background-size: 200% 200%;
     animation: border-rotation 3s linear infinite;
     padding: 5px; 
     transition: background 0.3s ease; 
+=======
+    background: conic-gradient(#8B4513, #A0522D, #8B4513, #A0522D); /* Dégradé marron */
+    background-size: 200% 200%;
+    animation: border-rotation 3s linear infinite;
+    padding: 5px; /* Espacement pour l'effet visuel de la bordure */
+    transition: background 0.3s ease; /* Transition pour le changement de couleur */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   
   }
   
@@ -27,16 +39,30 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
+<<<<<<< HEAD
     background-color: #fff; 
   }
   /* Effet au survol */
   .chatbot-icon:hover {
     background: conic-gradient(#32CD32, #3CB371, #32CD32, #3CB371); 
+=======
+    background-color: #fff; /* Couleur de fond pour l'image */
+  }
+  /* Effet au survol */
+  .chatbot-icon:hover {
+    background: conic-gradient(#32CD32, #3CB371, #32CD32, #3CB371); /* Dégradé vert au survol */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
     transform: scale(1.025);
     
   }
   
+<<<<<<< HEAD
   /* fenetre Chatbot  */
+=======
+  
+  
+  /* Chatbot Window */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   .chatbot-window {
     position: fixed;
     bottom: 20px;
@@ -46,9 +72,15 @@
     background-color: #292929;
     border-radius: 0px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+<<<<<<< HEAD
     display: none; 
     flex-direction: column;
     z-index: 1001; 
+=======
+    display: none; /* Cachée par défaut */
+    flex-direction: column;
+    z-index: 1001; /* Au-dessus de l'icône */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
     overflow: hidden;
   }
   
@@ -85,7 +117,11 @@
     line-height: 1.4;
   }
   
+<<<<<<< HEAD
   /* Message reçu  par chatbot */
+=======
+  /* Message reçu (chatbot) */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   .chatbot-message.received {
     background-color: #f1f1f1;
     color: #333;
@@ -93,7 +129,11 @@
     margin-left: 10px;
   }
   
+<<<<<<< HEAD
   /* Message envoyé user */
+=======
+  /* Message envoyé (utilisateur) */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   .chatbot-message.sent {
     background-color: #4CAF50;
     color: white;
@@ -101,6 +141,12 @@
     margin-right: 10px;
   }
   
+<<<<<<< HEAD
+=======
+  
+  
+  
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   .toggle-choices {
     display: block;
     text-align: center;
@@ -112,6 +158,7 @@
   }
   
   .chatbot-choices {
+<<<<<<< HEAD
     display: none; 
     background-color: #f1f1f1;
     padding: 4px;
@@ -120,6 +167,16 @@
     justify-content: center; 
     gap: 10px; 
     flex-wrap: wrap; 
+=======
+    display: none; /* Masqué par défaut */
+    background-color: #f1f1f1;
+    padding: 4px;
+    text-align: center;
+    display: flex; /* Active le flexbox */
+    justify-content: center; /* Centre les boutons horizontalement */
+    gap: 10px; /* Espacement uniforme entre les boutons */
+    flex-wrap: wrap; /* Permet le retour à la ligne si nécessaire */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   }
   
   .chatbot-choices button {
@@ -127,6 +184,7 @@
     color: white;
     border: none;
     padding: 10px;
+<<<<<<< HEAD
     width: 250px; 
     height: 40px; 
     margin: 5px; 
@@ -134,12 +192,26 @@
     cursor: pointer;
     font-family: "CUSTOM";
     text-align: center; 
+=======
+    width: 250px; /* Définit une largeur fixe pour tous les boutons */
+    height: 40px; /* Définit une hauteur fixe pour uniformiser */
+    margin: 5px; /* Espacement autour des boutons */
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "CUSTOM";
+    text-align: center; /* Centrer le texte */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   }
   
   .chatbot-choices button:hover {
     background-color: #306e32;
   }
   
+<<<<<<< HEAD
+=======
+  
+  
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   .chatbot-footer {
     padding: 10px;
     display: flex;
@@ -184,7 +256,11 @@
   .craft-list {
     display: flex;
     flex-direction: column;
+<<<<<<< HEAD
     gap: 10px; 
+=======
+    gap: 10px; /* Espacement entre les crafts */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
     margin: 20px 0;
   }
   
@@ -202,18 +278,31 @@
     width: 100%;
     padding: 10px;
     font-family: 'CUSTOM';
+<<<<<<< HEAD
     gap: 10px; 
+=======
+    gap: 10px; /* Espacement entre les colonnes */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
     transition: transform 0.2s;
   }
   
   .craft-item button:hover {
+<<<<<<< HEAD
     transform: scale(1.05); 
+=======
+    transform: scale(1.05); /* Animation au survol */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   }
   
   /* Colonne de l'image */
   .craft-item button .image-column {
+<<<<<<< HEAD
     flex: 0 0 50%; 
     height: 50%; 
+=======
+    flex: 0 0 50%; /* Largeur fixe pour l'image */
+    height: 50%; /* Hauteur fixe pour l'image */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   }
   
   .craft-item button .image-column img {
@@ -226,6 +315,7 @@
   
   /* Colonne du texte */
   .craft-item button .text-column {
+<<<<<<< HEAD
     flex: 1; 
     display: flex;
     flex-direction: column; 
@@ -237,6 +327,19 @@
     white-space: normal; 
     word-wrap: break-word; 
     line-height: 1.2; 
+=======
+    flex: 1; /* Prend tout l'espace restant */
+    display: flex;
+    flex-direction: column; /* Aligne le texte en colonne */
+    justify-content: center; /* Centre verticalement */
+    overflow: hidden; /* Empêche le débordement */
+  }
+  
+  .craft-item button .text-column span {
+    white-space: normal; /* Autorise les retours à la ligne */
+    word-wrap: break-word; /* Divise les mots longs */
+    line-height: 1.2; /* Réduit l'espacement vertical */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   }
   
   

@@ -25,12 +25,20 @@ function showPopup() {
   document.getElementById('popup').style.display = 'flex';
 }
 
+<<<<<<< HEAD
 // Fonction fermer le popup
+=======
+// Fonction pour fermer le popup
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 function closePopup() {
   document.getElementById('popup').style.display = 'none';
 }
 
+<<<<<<< HEAD
 // popup cacher à l'ouverture
+=======
+// À l'ouverture de la page, assurez-vous que le popup est caché
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 window.onload = function() {
   document.getElementById('popup').style.display = 'none';
 };

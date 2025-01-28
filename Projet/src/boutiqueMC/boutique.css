@@ -391,27 +391,46 @@ body {
 
 /* Style du Popup */
 .popup {
+<<<<<<< HEAD
   display: none; 
+=======
+  display: none; /* Le popup est caché par défaut */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+<<<<<<< HEAD
   background-color: rgba(0, 0, 0, 0.5); 
   justify-content: center;
   align-items: center;
   z-index: 9999; 
+=======
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Le popup est au-dessus de tout */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 }
 
 /* Contenu du Popup */
 .popup-content {
+<<<<<<< HEAD
   position: relative; 
+=======
+  position: relative; /* Important : nécessaire pour positionner le bouton dans ce conteneur */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   max-width: 500px;
   text-align: center;
+<<<<<<< HEAD
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+=======
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre pour un meilleur effet visuel */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 }
 .popup-content h2{
   color: black;
@@ -424,6 +443,7 @@ body {
   font-size: 30px;
   color: #000;
   cursor: pointer;
+<<<<<<< HEAD
   position: absolute;
   top: 10px;
   right: 10px;
@@ -431,12 +451,25 @@ body {
 }
 
 /* Effet survol bouton de fermeture */
+=======
+  position: absolute; /* Se positionne par rapport au parent ayant "position: relative" */
+  top: 10px;
+  right: 10px;
+  z-index: 10; /* Toujours au-dessus du contenu */
+}
+
+/* Effet au survol du bouton de fermeture */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 .popup-close:hover {
   color: #f00;
 }
 
 
+<<<<<<< HEAD
 /* Style bouton soit visible */
+=======
+/* Style du bouton pour qu'il soit visible */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 .new-button-class {
     padding: 10px 20px;
     background-color: #4CAF50; 

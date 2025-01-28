@@ -50,7 +50,11 @@ body {
 .main-image img {
     width: 100%;
     height: 100%;
+<<<<<<< HEAD
     object-fit: cover;
+=======
+    object-fit: cover; /* Couvre tout le conteneur en conservant les proportions */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 }
 
 /* Description */

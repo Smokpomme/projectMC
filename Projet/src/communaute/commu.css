@@ -42,7 +42,11 @@ body {
   font-family: "CUSTOM"; 
   font-size: 48px; 
   color: rgb(218, 218, 218); 
+<<<<<<< HEAD
   text-align: center; 
+=======
+  text-align: center; /* Centre le texte pour un meilleur aspect sur mobile */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 }
 
 .mc_p {
@@ -108,8 +112,14 @@ body {
   scroll-behavior: smooth;
   overflow-x: auto;
   width: 100%;
+<<<<<<< HEAD
   scrollbar-width: thin; 
   scrollbar-color: #ffffff #202020; 
+=======
+  /* Apparence de la barre de défilement */
+  scrollbar-width: thin; /* Barre de défilement fine pour Firefox */
+  scrollbar-color: #ffffff #202020; /* Couleur de la barre de défilement (la barre et le fond de la barre) */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 }
 
 .item {
@@ -276,12 +286,21 @@ body {
 
 /* partage */
 .share {
+<<<<<<< HEAD
   display: flex; 
   flex-direction: column; 
   align-items: center; 
   text-align: center; 
   color: rgb(19, 19, 19); 
   padding: 20px; 
+=======
+  display: flex; /* Utilise flexbox pour aligner les éléments */
+  flex-direction: column; /* Dispose les éléments en colonne */
+  align-items: center; /* Centre horizontalement */
+  text-align: center; /* Centre le texte dans les divs */
+  color: rgb(19, 19, 19); /* Change la couleur du texte en blanc */
+  padding: 20px; /* Ajoute un peu d'espace autour */
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   background-color: #f1f1f1;
 }
 

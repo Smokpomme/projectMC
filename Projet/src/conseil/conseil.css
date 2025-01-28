@@ -39,11 +39,29 @@ body {
     font-family: "CUSTOM"; 
     font-size: 48px; 
     color: rgb(235, 235, 235); 
+<<<<<<< HEAD
     text-align: center; 
   }
   
   /* Conteneur principal */
   #carrousel-1 {
+=======
+    text-align: center; /* Centre le texte pour un meilleur aspect sur mobile */
+  }
+  
+
+  
+  
+  
+  
+
+
+  
+  
+
+/* Conteneur principal */
+#carrousel-1 {
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
     background-color: rgb(71, 153, 50); 
   }
   #carrousel-2 {

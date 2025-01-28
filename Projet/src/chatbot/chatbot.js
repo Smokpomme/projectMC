@@ -2,7 +2,11 @@ let crafts = {}; // Variable globale pour stocker les données JSON
 
 // Charger le fichier JSON
 function loadCraftsData() {
+<<<<<<< HEAD
   fetch('/Projet/src/chatbot/crafts.json')
+=======
+  fetch('/projectMC/Projet/src/chatbot/crafts.json')
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
     .then(response => {
       if (!response.ok) {
         throw new Error("Erreur lors du chargement des données JSON");
@@ -10,7 +14,11 @@ function loadCraftsData() {
       return response.json();
     })
     .then(data => {
+<<<<<<< HEAD
       crafts = data; 
+=======
+      crafts = data; // Stocke les données JSON dans la variable globale
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
       console.log("Données JSON chargées :", crafts);
     })
     .catch(error => console.error("Erreur :", error));
@@ -24,18 +32,30 @@ document.addEventListener('DOMContentLoaded', loadCraftsData);
     const chatbotWindow = document.getElementById('chatbotWindow');
   
     if (chatbotWindow.style.display === 'none' || chatbotWindow.style.display === '') {
+<<<<<<< HEAD
       chatbotIcon.style.display = 'none';
       chatbotWindow.style.display = 'flex'; 
     } else {
       chatbotIcon.style.display = 'flex'; 
       chatbotWindow.style.display = 'none'; 
+=======
+      chatbotIcon.style.display = 'none'; // Cache l'icône
+      chatbotWindow.style.display = 'flex'; // Affiche la fenêtre
+    } else {
+      chatbotIcon.style.display = 'flex'; // Réaffiche l'icône
+      chatbotWindow.style.display = 'none'; // Cache la fenêtre
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
     }
   }
   
   // Fonction pour envoyer un message
   function handleUserInput() {
     const inputField = document.getElementById('chatbot-input');
+<<<<<<< HEAD
     const userMessage = inputField.value.trim().toLowerCase(); 
+=======
+    const userMessage = inputField.value.trim().toLowerCase(); // Assurez-vous de convertir en minuscules
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   
     if (userMessage) {
       // Afficher le message de l'utilisateur
@@ -100,11 +120,23 @@ function appendMessage(sender, message) {
   }
 
   chatbotBody.appendChild(messageElement);
+<<<<<<< HEAD
   chatbotBody.scrollTop = chatbotBody.scrollHeight; 
 }
   
  // CHOIX MULTIPLES
 
+=======
+  chatbotBody.scrollTop = chatbotBody.scrollHeight; // Faire défiler vers le bas
+}
+  
+
+
+ // CHOIX MULTIPLES
+
+
+
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
 // Initialisation des choix principaux
 let isFirstVisit = true; // Variable pour suivre si c'est la première visite
 
@@ -161,6 +193,10 @@ function initializeChatbot() {
       appendMessage('user', "Crafts");
       appendMessage('bot', "<p>Choisissez une catégorie :</p>");
   
+<<<<<<< HEAD
+=======
+      // Affiche les catégories disponibles
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
       showChoices([
         { text: "Blocs", onclick: "showCategoryDetails('blocs')" },
         { text: "Armures et Armes", onclick: "showCategoryDetails('utilitaires')" },
@@ -359,6 +395,11 @@ function showCraftDetailsByKey(craftKey) {
     }
   }
   
+<<<<<<< HEAD
+=======
+  
+  
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   // Fonction pour ajouter un message dans le chatbot
   function appendMessage(sender, message) {
     const chatbotBody = document.getElementById('chatbotBody');
@@ -367,7 +408,11 @@ function showCraftDetailsByKey(craftKey) {
   
     messageElement.innerHTML = message;
     chatbotBody.appendChild(messageElement);
+<<<<<<< HEAD
     chatbotBody.scrollTop = chatbotBody.scrollHeight; 
+=======
+    chatbotBody.scrollTop = chatbotBody.scrollHeight; // Faire défiler vers le bas
+>>>>>>> b6d36adb386348ac10ecf6c9008a312cae5622d8
   }
   
   // Initialisation du chatbot lors du chargement de la page
